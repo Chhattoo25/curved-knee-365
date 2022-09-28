@@ -1,14 +1,33 @@
+
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import {BiSearch} from 'react-icons/bi'
 import {MdLocationPin} from 'react-icons/md'
 import { JobCard } from '../../Components/JobCard/JobCard'
+import { UserAuth } from '../../Context/AuthContext'
+
+
+
 
 const Home = () => {
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
 
+  const {user,logOut} = UserAuth();
+
+  const handleSignOut = async () => {
+    try {
+      await logOut()
+    } catch (error) {
+      console.log(error)
+    }
+  }
+  
+
   return (
+    <>
+    <button onClick={handleSignOut}></button>
+    <h2>{user.displayName}</h2>
     <COMPONENT>
       <SEARCHBAR_CONTAINER>
         <SEARCHBAR_CONTAINER_WRAPPER>
@@ -52,7 +71,10 @@ const Home = () => {
       
       <JobCard></JobCard>
     </COMPONENT>
+    </>
+
   )
+  
 }
 
 export default Home
