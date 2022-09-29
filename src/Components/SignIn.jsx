@@ -22,12 +22,11 @@ function SignIn() {
 
   return (
     <div className={styles.main} >
-    <Link to='/' >
-        <div className={styles.logo} >
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Indeed_logo.svg/2560px-Indeed_logo.svg.png" alt="logo" />
-        </div>
-    </Link>
-        
+        <Link to='/' >
+            <div className={styles.logo} >
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Indeed_logo.svg/2560px-Indeed_logo.svg.png" alt="logo" />
+            </div>
+        </Link>
         <div className={styles.container} >
             <h3 className={styles.container_h3} >Ready to take the next step?</h3>
             <h4 className={styles.container_h4} >Create an account or sign in.</h4>
@@ -64,6 +63,26 @@ function SignIn() {
                 </div>
             </div>
             
+        </div>
+        <div className={styles.bottom} >
+            <p>Career Advice</p>
+            <p>Browse Jobs</p>
+            <p>Browse Companies</p>
+            <p>Salaries</p>
+            <p>Indeed Events</p>
+            <p>Work at Indeed</p>
+            <p>Countries</p>
+            <p>About</p>
+            <p>Help Center</p>
+            <p>ESG at Indeed</p>
+        </div>
+        <div className={styles.bottom2} >
+            <p>2022 Indeed</p>
+            <p>Accessibility at Indeed</p>
+            <p>Privacy Center</p>
+            <p>Cookies</p>
+            <p>Privacy</p>
+            <p>Terms</p>
         </div>
     </div>
   )
