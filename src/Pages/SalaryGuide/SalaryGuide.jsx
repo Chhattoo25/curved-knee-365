@@ -2,7 +2,7 @@ import React from 'react'
 
 const SalaryGuide = () => {
   return (
-    <div>SalaryGuide</div>
+    <div >SalaryGuide</div>
   )
 }
 

@@ -2,17 +2,31 @@ import {
   Box,
   Button,
   InputAdornment,
+  Link,
   TextField,
   Typography,
 } from "@mui/material";
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import styles from "./CompanyReview.module.css";
+import HoverRating from "./HoveRating";
+import PopularCompanies from "./PopularCompanies";
+import CompanyWorking from "./ComapreWork";
+import { borderRadius } from "@mui/system";
+import { Footer } from "./Footer";
 const ComapanyReview = () => {
   return (
     <>
-      <Box sx={{ width: "70%", margin: "auto", m: "150px 400px 0px 00px" }}>
-        <Box sx={{}}>
+      <Box sx={{ width: "100%", mt: "19vh", border: "2px solid black" }}>
+        <Box
+          sx={{
+            width: "67%",
+            m: "auto",
+            justifyContent: "center",
+            p: "20px",
+            border: "2px solid red",
+          }}
+        >
           <Typography
             variant="h1"
             sx={{ fontSize: "40px", fontWeight: "bold", color: "#414141" }}
@@ -25,31 +39,98 @@ const ComapanyReview = () => {
           <Typography style={{ fontWeight: "bold" }}>
             Company name or job title
           </Typography>
-        </Box>
-        <Box display={"flex"}>
-          <TextField
-            sx={{ width: "860px", margin: "6px 0 0 3px" }}
-            size="small"
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <SearchIcon />
-                </InputAdornment>
-              ),
-            }}
-          ></TextField>
-          <Button
-            variant="contained"
+          <Box
             sx={{
-              width: "300px",
-              margin: "5.3px 0 0 50px",
-              height: "40px",
-              fontWeight: "bold",
+              display: "flex",
+              flexDirection: { xs: "column", sm: "column", md: "row" },
             }}
-            size="small"
           >
-            Find Companies
-          </Button>
+            <TextField
+              sx={{
+                width: { sm: "100%", md: "80%", lg: "80%" },
+                margin: "6px 3px 6px 3px",
+                borderRadius: "40px",
+              }}
+              size="small"
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <SearchIcon />
+                  </InputAdornment>
+                ),
+              }}
+            ></TextField>
+            <Button
+              sx={{
+                bgcolor: "#2557a7",
+
+                color: "#babde5",
+                width: { sm: "100%", md: "20%", lg: "20%" },
+                m: { xs: "10px 10px", sm: "10px 10px", lg: "6px 3px" },
+                height: "40px",
+                fontWeight: "bold",
+              }}
+              size="small"
+            >
+              Find Companies
+            </Button>
+          </Box>
+          <Link href="/salryguide" underline="always">
+            Do you want to search for salaries?
+          </Link>
+          <Typography
+            variant="h4"
+            sx={{ fontWeight: "bold", mt: "40px", color: "#414141" }}
+          >
+            Popular Comapnies
+          </Typography>
+          <Box>
+            <PopularCompanies />
+          </Box>
+          <Typography
+            variant="h4"
+            sx={{ fontWeight: "bold", mt: "40px", color: "#414141" }}
+          >
+            Compare working at
+          </Typography>
+
+          <Box>
+            <CompanyWorking />
+          </Box>
+
+          <Box
+            sx={{
+              width: "100%",
+              background: "#f5fbf9",
+              height: "100px",
+              mt: "70px",
+              borderRadius: "5px",
+            }}
+          >
+            <Box
+              sx={{
+                w: "90%",
+                m: "auto",
+                padding: "22px 6px 12px 6px",
+                mt: "15px",
+              }}
+            >
+              <Box display={"flex"} justifyContent="center" gap="15px">
+                <Typography variant="h6" fontWeight={"bold"}>
+                  Rate Your Recent Comapny :
+                </Typography>
+                <Box>
+                  <HoverRating />
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+        
+
+        {/* footer  */}
+        <Box mt='100px'>
+          <Footer/>
+        </Box>
         </Box>
       </Box>
     </>
