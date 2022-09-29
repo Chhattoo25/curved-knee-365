@@ -1,6 +1,6 @@
 .main{
     width: 100%;
-    height: auto;
+    height: 100%;
     border: none;
     margin: 0;
     background: #f3f2f1;
@@ -44,6 +44,7 @@
     background-color: white;
     border-radius: 8px;
     padding: 20px;
+    margin-bottom: 20px;
 }
 .button_container{
     display: flex;
@@ -133,4 +134,29 @@
     font-weight: bolder;
     gap: 5px;
     margin-top: 10px;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    flex-wrap: wrap;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.bottom>p:hover{
+    text-decoration: underline;
+}
+
+.bottom2{
+    display: flex;
+    justify-content: space-around;
+    width: 38%;
+    flex-wrap: wrap;
+    cursor: pointer;
+    font-size: 15px;
+}
+.bottom2>p:hover{
+    text-decoration: underline;
 }
