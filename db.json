@@ -4,72 +4,552 @@
       "id": 1,
       "title": "Business Development Officer",
       "role": "Business Development Officer",
+      "reviews": "29",
       "location": "Delhi, Delhi",
       "min_salary": "35000",
       "max_salary": "40000",
       "job_type": "Full-time",
       "shift": "Morning shift",
       "company": "Polinsys Ltd",
-      "apply_with":"Appy securely with Indeed Resume",
-      "hiring": "Hiring multiple candidates",
-      "responsive_employer":"responsive_employer"
+      "hiring_insight":"Hiring 2 candidates for this role",
+      "employe_should":[
+        {
+          "pt": "Apply securely with Indeed Resume"
+        },
+        {
+          "pt": "Responsive employer"
+        },
+        {
+          "pt": "Hiring multiple candidates"
+        }
+      ],
+      "qualifications":[
+        {
+          "pt": "Bachelor's (Preferred)"
+        },
+        {
+          "pt": "Customer support: 1 year (Preferred)"
+        },
+        {
+          "pt": "total work: 1 year (Preferred)"
+        },
+        {
+          "pt": "Customer service: 1 year (Preferred)"
+        },
+        {
+          "pt": "Hindi (Preferred)"
+        },
+        {
+          "pt": "English (Preferred)"
+        }
+      ],
+      "job_description":[
+        {"pt": "Attract potential customers by answering product and service questions; suggesting information about products and services."
+        },
+        {
+          "pt": "Manage product and service requirements of the client and adhere to response times and follow-up processes."
+        },
+        {
+          "pt": "Recommends potential products or services by collecting customer information and analyzing customer needs. Prepares product or service reports by collecting and analyzing customer information."
+        }
+      ]
     },
     {
       "id": 2,
-      "title": "Business Development Officer",
-      "role": "Business Development Officer",
-      "location": "Delhi, Delhi",
-      "min_salary": "35000",
-      "max_salary": "40000",
+      "title": "Java Developer",
+      "role": "Java Developer",
+      "reviews": "45",
+      "location": "Bengaluru, Karnataka",
+      "min_salary": "55000",
+      "max_salary": "70000",
       "job_type": "Full-time",
-      "shift": "Morning shift",
-      "company": "Polinsys Ltd",
-      "apply_with":"Appy securely with Indeed Resume",
-      "hiring": "Hiring multiple candidates",
-      "responsive_employer":"responsive_employer"
+      "shift": "Day shift",
+      "company": "CONGNITIVE CLOUDS SOFTWARE Pvt Ltd",
+      "hiring_insight":"Hiring 3 candidates for this role",
+      "employe_should":[
+        {
+          "pt": "Apply securely with Indeed Resume"
+        },
+        {
+          "pt": "Responsive employer"
+        },
+        {
+          "pt": "Hiring multiple candidates"
+        }
+      ],
+      "qualifications":[
+        {
+          "pt": "Java: 1 year (Required)"
+        }
+        
+      ],
+      "job_description":[
+        {"pt": "At least 1 year of experience with Java Development."
+        },
+        {
+          "pt": "Good with OOPS, OOAD knowledge"
+        },
+        {
+          "pt": "Good with programming skills"
+        },
+        {"pt": "Knowledge on databases (e.g. MySQL)"
+        },
+        {
+          "pt": "Good Knowledge on REST APIs"
+        },
+        {
+          "pt": "Write well designed, testable, efficient code."
+        }
+      ]
     },
     {
       "id": 3,
-      "title": "Business Development Officer",
-      "role": "Business Development Officer",
-      "location": "Delhi, Delhi",
-      "min_salary": "35000",
-      "max_salary": "40000",
-      "job_type": "Full-time",
+      "title": "Mern Developer",
+      "role": "Mern Developer",
+      "reviews": "45",
+      "location": "Bengaluru, Karnataka",
+      "min_salary": "50000",
+      "max_salary": "70000",
+      "job_type": "Part-time",
       "shift": "Morning shift",
-      "company": "Polinsys Ltd",
-      "apply_with":"Appy securely with Indeed Resume",
-      "hiring": "Hiring multiple candidates",
-      "responsive_employer":"responsive_employer"
+      "company": "Rooke Pvt Ltd",
+      "hiring_insight":"Hiring 3 candidates for this role",
+      "employe_should":[
+        {
+          "pt": "Apply securely with Indeed Resume"
+        },
+        {
+          "pt": "Responsive employer"
+        },
+        {
+          "pt": "Hiring multiple candidates"
+        }
+      ],
+      "qualifications":[
+        {
+          "pt": "MERN: 1 year (Required)"
+        }
+        
+      ],
+      "job_description":[
+        {"pt": "At least 1 year of experience as MERN Developer."
+        },
+        {
+          "pt": "Good with frontend"
+        },
+        {
+          "pt": "Good with programming skills"
+        },
+        {"pt": "Knowledge on databases "
+        },
+        {
+          "pt": "Good Knowledge on REST APIs"
+        },
+        {
+          "pt": "Write well designed, testable, efficient code."
+        }
+      ]
     },
     {
       "id": 4,
-      "title": "Business Development Officer",
-      "role": "Business Development Officer",
-      "location": "Delhi, Delhi",
-      "min_salary": "35000",
-      "max_salary": "40000",
+      "title": "C++ Software Engineer (100% Remote)",
+      "role": "C++ Software Engineer (100% Remote)",
+      "reviews": "70",
+      "location": "Delhi, New Delhi",
+      "min_salary": "70000",
+      "max_salary": "90000",
       "job_type": "Full-time",
       "shift": "Morning shift",
-      "company": "Polinsys Ltd",
-      "apply_with":"Appy securely with Indeed Resume",
-      "hiring": "Hiring multiple candidates",
-      "responsive_employer":"responsive_employer"
+      "company": "Deep Trekker Inc.",
+      "hiring_insight":"Hiring 3 candidates for this role",
+      "employe_should":[
+        {
+          "pt": "Apply securely with Indeed Resume"
+        },
+        {
+          "pt": "Responsive employer"
+        },
+        {
+          "pt": "Hiring multiple candidates"
+        }
+      ],
+      "qualifications":[
+        {
+          "pt": "C++: 1 year (Preferred)"
+        }
+        
+      ],
+      "job_description":[
+        {"pt": "At Deep Trekker, we work hard and get stuff done, but we have fun doing it. Our above ground and underwater remotely operated vehicles (ROVs) are used across the world with a variety of applications and users."
+        },
+        {
+          "pt": "We are constantly challenging ourselves to push the next frontier of technology, while striving to provide our customers with simple and reliable solutions. With passionate rapid innovation, Deep Trekker has experienced continued success and growth since our inception and we are always looking to grow our amazing team."
+        },
+        {
+          "pt": "We are currently seeking a versatile and talented C++ Software Engineer with an embedded focus. If you are a highly motivated developer who is passionate about developing mobile robots and underwater drones this might be the job for you."
+        },
+        {"pt": "In this role, you will work remotely with a team of passionate developers, working on our embedded linux controller, to provide intuitive and user friendly features. "
+        }
+      ]
     },
     {
       "id": 5,
-      "title": "Business Development Officer",
-      "role": "Business Development Officer",
-      "location": "Delhi, Delhi",
-      "min_salary": "35000",
-      "max_salary": "40000",
+      "title": "Full-Stack Software Engineer/REMOTE",
+      "role": "Full-Stack Software Engineer/REMOTE",
+      "reviews": "50",
+      "location": "Hydrabad, Telangana Remote",
+      "min_salary": "100000",
+      "max_salary": "1200000",
       "job_type": "Full-time",
       "shift": "Morning shift",
-      "company": "Polinsys Ltd",
-      "apply_with":"Appy securely with Indeed Resume",
-      "hiring": "Hiring multiple candidates",
-      "responsive_employer":"responsive_employer"
+      "company": "Deep Trekker Inc.",
+      "hiring_insight":"Hiring 3 candidates for this role",
+      "employe_should":[
+        {
+          "pt": "Apply securely with Indeed Resume"
+        },
+        {
+          "pt": "Responsive employer"
+        },
+        {
+          "pt": "Hiring multiple candidates"
+        }
+      ],
+      "qualifications":[
+        {
+          "pt": "PHP: 3 years(Preferred)"
+        },
+        {
+          "pt": "Javascript: 2 years (Preferred)"
+        },
+        {
+          "pt": "CSS: 1 years(Preferred)"
+        }
+        
+      ],
+      "job_description":[
+        {"pt": "We are a US-based company looking for full-time remote software engineers. We are especially interested in people who think outside the box and are focused on functionality, scalability, and changing the way online marketing is done."
+        },
+        {
+          "pt": "ONEcount is a leading Customer Data Platform, combining the engagement actions of web visitors across multiple data channels for a single, actionable customer view."
+        },
+        {
+          "pt": "We run our powerful, SAAS platform from dual data centers for ultimate redundancy and geographic load balancing. It's a fast-paced environment where learning is ever-present, and the standards are high."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Senior Python Developer",
+      "role": "Senior Python Developer",
+      "reviews": "50",
+      "location": "Coimbatore, Tamil Nadu",
+      "min_salary": "60000",
+      "max_salary": "700000",
+      "job_type": "Full-time",
+      "shift": "Morning shift",
+      "company": "Envelor Clorporation.",
+      "hiring_insight":"Hiring 3 candidates for this role",
+      "employe_should":[
+        {
+          "pt": "Apply securely with Indeed Resume"
+        },
+        {
+          "pt": "Responsive employer"
+        },
+        {
+          "pt": "Hiring multiple candidates"
+        }
+      ],
+      "qualifications":[
+        {
+          "pt": "Software development: 1 year (Preferred)"
+        },
+        {
+          "pt": "Python: 1 year (Preferred)"
+        }
+      ],
+      "job_description":[
+        {"pt": "Will be involved in development and delivery of high traffic ecommerce websites."
+        },
+        {
+          "pt": "Understanding business requirements and translating them into technical solutions."
+        },
+        {
+          "pt": "Ideal candidate will be hardworking and open to learn and grow with company."
+        },
+        {"pt": "At least 1 to 2 years experience in Python / PHP development leveraging frameworks."
+        },
+        {
+          "pt": "Proficient in Bootstrap , HTML5, CSS3, JavaScript, jQuery and other JS libraries."
+        },
+        {
+          "pt": "Strong coding experience in Python / PHP and other programming languages preferred"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Software Developer_ Fresher - MUMBAI",
+      "role": "Software Developer_ Fresher - MUMBAI",
+      "reviews": "50",
+      "location": "Mumbai, Maharashtra",
+      "min_salary": "40000",
+      "max_salary": "65000",
+      "job_type": "Full-time",
+      "shift": "Day shift",
+      "company": "IMTS Enterprise Solutions Pvt. Ltd.",
+      "hiring_insight":"Hiring 3 candidates for this role",
+      "employe_should":[
+        {
+          "pt": "Apply securely with Indeed Resume"
+        },
+        {
+          "pt": "Responsive employer"
+        },
+        {
+          "pt": "Hiring multiple candidates"
+        }
+      ],
+      "qualifications":[
+        {
+          "pt": "Software development: 1 year (Preferred)"
+        },
+        {
+          "pt": "Python: 1 year (Preferred)"
+        }
+      ],
+      "job_description":[
+        {"pt": " Designing, developing & implementing of applications / forms / reports"
+        },
+        {
+          "pt": "Writing queries & undertaking data migration"
+        },
+        {
+          "pt": "Optimization of existing work done "
+        },
+        {"pt": "Selected candidates shall be provided training material for SAP / Siemens / Zoho"
+        },
+        {
+          "pt": "Bachelor's degree in Computer Science/Information Technology or MCA"
+        },
+        {
+          "pt": "Working knowledge of more than 2 of these skills -> Java, JavaScript, Python, C#, VB.Net, Crystal Reports, SQL"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Software Developer_ Fresher - MUMBAI",
+      "role": "Software Developer_ Fresher - MUMBAI",
+      "reviews": "42",
+      "location": "Mumbai, Maharashtra",
+      "min_salary": "40000",
+      "max_salary": "65000",
+      "job_type": "Full-time",
+      "shift": "Day shift",
+      "company": "IMTS Enterprise Solutions Pvt. Ltd.",
+      "hiring_insight":"Hiring 3 candidates for this role",
+      "employe_should":[
+        {
+          "pt": "Apply securely with Indeed Resume"
+        },
+        {
+          "pt": "Responsive employer"
+        },
+        {
+          "pt": "Hiring multiple candidates"
+        }
+      ],
+      "qualifications":[
+        {
+          "pt": "Software development: 1 year (Preferred)"
+        },
+        {
+          "pt": "Python: 1 year (Preferred)"
+        }
+      ],
+      "job_description":[
+        {"pt": " Designing, developing & implementing of applications / forms / reports"
+        },
+        {
+          "pt": "Writing queries & undertaking data migration"
+        },
+        {
+          "pt": "Optimization of existing work done "
+        },
+        {"pt": "Selected candidates shall be provided training material for SAP / Siemens / Zoho"
+        },
+        {
+          "pt": "Bachelor's degree in Computer Science/Information Technology or MCA"
+        },
+        {
+          "pt": "Working knowledge of more than 2 of these skills -> Java, JavaScript, Python, C#, VB.Net, Crystal Reports, SQL"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Software Engineer",
+      "role": "Software Engineer",
+      "reviews": "42",
+      "location": "Bengaluru, Karnataka",
+      "min_salary": "40000",
+      "max_salary": "65000",
+      "job_type": "Full-time",
+      "shift": "Day shift",
+      "company": "Electro Scientific Concern",
+      "hiring_insight":"Hiring 6 candidates for this role",
+      "employe_should":[
+        {
+          "pt": "Apply securely with Indeed Resume"
+        },
+        {
+          "pt": "Responsive employer"
+        }
+      ],
+      "qualifications":[
+        {
+          "pt": "Software development: 1 year (Preferred)"
+        }
+      ],
+      "job_description":[
+        {"pt": " We’re looking for a top-notch Software Engineer who always sweats the small stuff and cares about impeccable code. If you see glitches as an enjoyable challenge rather than a hardship and if you are willing to put in long hours to see a project come to fruition, get in touch with us today."
+        },
+        {
+          "pt": "Develop a new software product from the ground up, staying true to our company’s core values and needs while lending your own creativity to the mix"
+        },
+        {
+          "pt": "Expand existing software to meet the changing needs of our key demographics"
+        },
+        {"pt": "Selected candidates shall be provided training material for SAP / Siemens / Zoho"
+        },
+        {
+          "pt": "Create scaleable, automated solutions for our customer base"
+        },
+        {
+          "pt": "7+ years’ software development or programming experience"
+        },
+        {"pt": "Extensive experience with Java, Python, C++ and other programming languages"
+        },
+        {
+          "pt": "In-depth understanding of HTML5, CSS3 and CMSs"
+        },
+        {
+          "pt": "Bachelor’s Degree in Software Engineering or Information Technology"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Java Developer (Ahmedabad - Work from Office only)",
+      "role": "Java Developer (Ahmedabad - Work from Office only)",
+      "reviews": "42",
+      "location": "Ahmedabad, Gujarat",
+      "min_salary": "40000",
+      "max_salary": "100000",
+      "job_type": "Full-time",
+      "shift": "Day shift",
+      "company": "NSEG Pvt Ltd",
+      "hiring_insight":"Hiring 2 candidates for this role",
+      "employe_should":[
+        {
+          "pt": "Apply securely with Indeed Resume"
+        },
+        {
+          "pt": "Responsive employer"
+        }
+      ],
+      "qualifications":[
+        {
+          "pt": "Software development: 1 year (Preferred)"
+        }
+      ],
+      "job_description":[
+        {"pt": "Company: NSEG Pvt. Ltd., We are Australia’s leading and Largest Solar power system provider which is spread nationwide, serving many happy customers in New South Wales, South Australia, Queensland, Victoria, Western Australia and Australian Capital Territory. Ahmedabad is a branch office where we have staff strength of 300 employees."
+        }
+        
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Embedded Software Engineer",
+      "role": "Embedded Software Engineer",
+      "reviews": "42",
+      "location": "Pune, Maharashtra",
+      "min_salary": "40000",
+      "max_salary": "65000",
+      "job_type": "Full-time",
+      "shift": "Day shift",
+      "company": "Infinite Orbit Research & Development Private Limited",
+      "hiring_insight":"Hiring 1 candidate for this role",
+      "employe_should":[
+        {
+          "pt": "Apply securely with Indeed Resume"
+        },
+        {
+          "pt": "Responsive employer"
+        }
+      ],
+      "qualifications":[
+        {
+          "pt": "Bachelor's (Preferred)"
+        },
+        {
+          "pt": "total work: 1 year (Preferred)"
+        }
+      ],
+      "job_description":[
+        {"pt": " Role - embedded system engineer"
+        },
+        {
+          "pt": "Education - Btech/BE in E&TC /ELECTRONICS"
+        },
+        {
+          "pt": "Experience in developing software for Embedded Systems."
+        },
+        {"pt": " should have knowledge in c/c++ Responsibilities Analyze needs and product requirements to create functional design."
+        },
+        {
+          "pt": "Strong in C/C++ programming, Object-oriented design, knowledge of good programming practices."
+        }
+        
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Mumbai (Vileparle) - Spring, Springboot Developer",
+      "role": "Mumbai (Vileparle) - Spring, Springboot Developer",
+      "reviews": "69",
+      "location": "Mumbai, Maharashtra",
+      "min_salary": "40000",
+      "max_salary": "100000",
+      "job_type": "Full-time",
+      "shift": "Day shift",
+      "company": "JForce Solutions",
+      "hiring_insight":"Hiring 2 candidates for this role",
+      "employe_should":[
+        {
+          "pt": "Apply securely with Indeed Resume"
+        },
+        {
+          "pt": "Responsive employer"
+        }
+      ],
+      "qualifications":[
+        {
+          "pt": "Software development: 1 year (Preferred)"
+        }
+      ],
+      "job_description":[
+        {"pt": "JForce Solutions is looking for developers who have excellent coding skills and who can start contributing right away. There will be a bond of 2 years for this position based on your experience. The job location will be Vileparle west, Mumbai."
+        },
+        {"pt": "As a part of interview process, you will be asked to build Spring project at our office, during Round 1 of interview."
+        }
+        
+      ]
     }
+    
   ]
   
 }
