@@ -18,6 +18,7 @@ import flowerIcon from "../../Images/flowerIcon.png";
 import DrawerCom from "./DrawerCom";
 import { Link, Route } from "react-router-dom";
 
+
 const routes = ["/","/findjobs", "/companyreview", "/salaryguide","signin"];
 const Navbar = () => {
   const theme = useTheme();
@@ -92,6 +93,7 @@ const Navbar = () => {
     <Tab key={index} label={link} />
   })
 } */}
+
               </Tabs>
             </Grid>
             {/* <Grid item xs={1} /> */}
