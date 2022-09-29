@@ -17,6 +17,7 @@ import indeedlogo from "../../Images/indeedIcon.svg";
 import flowerIcon from "../../Images/flowerIcon.png";
 import DrawerCom from "./DrawerCom";
 
+
 const links = ['Find Jobs','Comapny Review', 'Salary Guide']
 const Navbar = () => {
   const theme = useTheme()
@@ -78,8 +79,8 @@ const Navbar = () => {
                 textColor="inherit"
               >
                 <Tab label="Post Your Resume" />
-                <Tab as={Button} label="Sign In" sx={{color:'#3757a7'}}>
-                  <Button>Sign In </Button>
+               <Tab as={Button} label="Sign In" sx={{color:'#3757a7'}}>
+                 <Button>Sign In </Button>
                 </Tab>
                 <Divider orientation="vertical" flexItem>
   
