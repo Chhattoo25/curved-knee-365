@@ -13,14 +13,10 @@ function App() {
   return (
     <>
 
-    
-  
+  <div className="App">
+    {/* {user?.displayName ? <Home /> : <SignIn />} */}
+    </div>
 
-
-     
-
-  {/* <div className="App">
-    {user?.displayName ? <Home /> : <SignIn />}</div> */}
 
   <Navbar/>
     <AllRoutes/>
