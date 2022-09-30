@@ -12,13 +12,22 @@ function App() {
   const { user } = UserAuth();
   return (
     <>
-      <div className="App">{user?.displayName ? <Home /> : <SignIn />}</div>
 
-      <Navbar />
+     
 
-      <AllRoutes />
+  {/* <div className="App">
+    {user?.displayName ? <Home /> : <SignIn />}</div> */}
+
+  <Navbar/>
+    <AllRoutes/>
+  {/* <br/>
+  <br/>
+  <br/>
+      <SalaryGuide/> */}
     </>
-  );
+    );
+
+
 }
 
 export default App;
