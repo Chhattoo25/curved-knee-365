@@ -1,0 +1,50 @@
+.companycontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  margin: 20px 40px 0 0px;
+  justify-content: center;
+}
+
+.cardcontainerdiv {
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid silver;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
+}
+.firstcompanyparentdiv {
+  display: flex;
+  align-items: center;
+  padding:10px 0px 10px 0px
+}
+.ratingone {
+  display: flex;
+  padding: auto;
+  margin-right: 5px;
+}
+
+.companylogo {
+  height: 40px;
+  width: 40px;
+}
+
+ /* @media only screen and (min-width: 600px){
+  .companycontainer{
+    grid-template-columns: repeat(2,1fr);
+   grid-gap: 40px;
+  }
+ }  */
+/* @media only screen and (max-width:600px) {
+  .companycontainer{
+    grid-template-columns: repeat(1,1fr);
+  }
+} */
+
+@media only screen and (max-width: 768px) {
+  .companycontainer {
+    grid-template-columns: repeat(1,1fr);
+  }
+}

@@ -1,0 +1,44 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-top: 10px;
+  grid-gap: 30px;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+}
+
+.image_rating {
+  display: flex;
+  gap: 30px;
+}
+.question_container {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.rating_views {
+  display: flex;
+  gap: 20px;
+}
+.popular_company_image {
+  width: "40px";
+  height: "40px";
+}
+.noofreview {
+  color: blue;
+}
+@media screen and (min-width: 500px) and (max-width: 788px){
+  .container{
+    grid-template-columns: repeat(2,1fr);
+   grid-gap: 40px;
+  }
+ }
+@media screen and (min-width:788px) {
+  .container{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+
+
