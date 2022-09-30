@@ -17,6 +17,9 @@ import indeedlogo from "../../Images/indeedIcon.svg";
 import flowerIcon from "../../Images/flowerIcon.png";
 import DrawerCom from "./DrawerCom";
 import { Link, Route } from "react-router-dom";
+import { UserAuth } from "../../Context/AuthContext";
+import UserModel from "../../Pages/AfterLogin/UserModel";
+import { BsFillBellFill, BsFillChatLeftTextFill } from "react-icons/bs";
 
 
 const routes = ["/","/findjobs", "/companyreview", "/salaryguide","signin"];
@@ -26,12 +29,18 @@ const Navbar = () => {
   console.log(isMatch);
   const [value, setValue] = useState();
   const [value2, setValue2] = useState();
+  const {user} = UserAuth();
+  console.log("sahil",user)
+
+
   return (
     // <Route path='/' render={()=>{
       
     // }} />
     <AppBar
+    style={{display:'block'}}
       sx={{
+        
         bgcolor: "white",
         color: "black",
         boxShadow:
@@ -55,9 +64,13 @@ const Navbar = () => {
           <Grid container>
             <Grid itme xs={2}>
               <Box display={"flex"} gap={"20px"}>
-                <Box mt={"10px"}>
+                <Link to='/'>
+                  
+                  <Box mt={"10px"}>
                   <img src={indeedlogo} alt="indeedLogo" />
                 </Box>
+                 
+                </Link>
                 <Box>
                   <img height={50} src={flowerIcon} alt="flowerIcon" />
                 </Box>
@@ -70,29 +83,26 @@ const Navbar = () => {
                 onChange={(e, val) => setValue2(val)}
                 textColor="inherit"
               >
+                
                 <Tab
                   label="Find Jobs"
-                  value={routes[0]}
+                  value={routes[1]}
                   component={Link}
                   to={routes[1]}
                 />
                 <Tab
                   label="Company Review"
-                  value={routes[1]}
+                  value={routes[2]}
                   component={Link}
                   to={routes[2]}
                 />
                 <Tab
                   label="Salary Guide"
-                  value={routes[2]}
+                  value={routes[3]}
                   component={Link}
                   to={routes[3]}
                 />
-                {/* {
-  links.map((link,index)=>{
-    <Tab key={index} label={link} />
-  })
-} */}
+               
 
               </Tabs>
             </Grid>
@@ -105,11 +115,29 @@ const Navbar = () => {
                   onChange={(e, val) => setValue(val)}
                   textColor="inherit"
                 >
+                  {user?.displayName ? (
+                    <>
+                     <Box mt={'15px'} mr='15px' display='flex' gap='30px'>
+                
+                  
+                    <BsFillChatLeftTextFill size={'25px'}/>
+                    <BsFillBellFill size={'25px'}/>
+                    <UserModel/>
+                </Box>
+                    </>
+                  ):(
+                  <>
                   <Tab label="Post Your Resume" to="/" />
                   <Tab label="Sign In" sx={{ color: "#3757a7" }}  component={Link}
                   to={routes[4]}>
                     <Button>Sign In </Button>
                   </Tab>
+                    </>
+                  )}
+  
+                  
+                  
+                  
                   <Divider orientation="vertical" flexItem></Divider>
                   <Tab label="Employers/Post Job" />
                 </Tabs>

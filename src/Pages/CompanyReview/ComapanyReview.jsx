@@ -14,17 +14,18 @@ import PopularCompanies from "./PopularCompanies";
 import CompanyWorking from "./ComapreWork";
 import { borderRadius } from "@mui/system";
 import { Footer } from "./Footer";
+import writing_icon from '../../Images/writing_icon.png'
 const ComapanyReview = () => {
   return (
     <>
-      <Box sx={{ width: "100%", mt: "19vh", border: "2px solid black" }}>
+      <Box sx={{ width: "100%", mt: "19vh" }}>
         <Box
           sx={{
-            width: "67%",
+            width: {sm:'100%',md:'80%',lg:'70%'},
             m: "auto",
             justifyContent: "center",
             p: "20px",
-            border: "2px solid red",
+         
           }}
         >
           <Typography
@@ -102,7 +103,7 @@ const ComapanyReview = () => {
             sx={{
               width: "100%",
               background: "#f5fbf9",
-              height: "100px",
+              height: {sm:'150px',md:'100px'},
               mt: "70px",
               borderRadius: "5px",
             }}
@@ -111,11 +112,13 @@ const ComapanyReview = () => {
               sx={{
                 w: "90%",
                 m: "auto",
+                height:{sm:'150px',md:'100px'},
                 padding: "22px 6px 12px 6px",
                 mt: "15px",
               }}
             >
               <Box display={"flex"} justifyContent="center" gap="15px">
+                <img src={writing_icon} alt='writitng_icon' width={'40px'} margitRight='8%'/>
                 <Typography variant="h6" fontWeight={"bold"}>
                   Rate Your Recent Comapny :
                 </Typography>
