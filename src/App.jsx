@@ -14,15 +14,9 @@ function App() {
   const { user } = UserAuth();
   return( 
     <>
-  <div className="App">
-    {user?.displayName ? <Home /> : <SignIn />}</div>
-
-  <Navbar/>
+    <Navbar/>
     <AllRoutes/>
-  <br/>
-  <br/>
-  <br/>
-      <SalaryGuide/>
+  
     </>
     );
 
