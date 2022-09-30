@@ -11,7 +11,8 @@ function App() {
   return( 
     <>
   <div className="App">
-    {user?.displayName ? <Home /> : <SignIn />}</div>
+    {/* {user?.displayName ? <Home /> : <SignIn />} */}
+    </div>
 
   <Navbar/>
   <br/>

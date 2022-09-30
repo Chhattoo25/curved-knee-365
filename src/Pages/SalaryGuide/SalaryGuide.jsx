@@ -21,11 +21,11 @@ const SalaryGuide = () => {
   const [location, setLocation] = useState("");
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <>
-      <div style={{ display: "flex" }}>
+    <div >
+      <div style={{ display: "flex","width":"100%"}}>
         <div
           style={{
-            width: "1100px",
+            width: "70%",
             height: "370px",
             backgroundColor: "#e8f3fc",
           }}
@@ -41,7 +41,7 @@ const SalaryGuide = () => {
           <div
             style={{
               backgroundColor: "#9bb1f0",
-              width: "950px",
+              width: "760px",
               height: "10px",
               marginLeft: "50px",
               borderTopLeftRadius: "10px",
@@ -51,7 +51,7 @@ const SalaryGuide = () => {
           <div
             style={{
               backgroundColor: "#ffffff",
-              width: "950px",
+              width: "760px",
               height: "140px",
               marginLeft: "50px",
               borderBottomLeftRadius: "10px",
@@ -77,7 +77,6 @@ const SalaryGuide = () => {
                 </div>
               </SEARCHBAR_CONTAINER_WRAPPER>
               <SEARCHBAR_CONTAINER_WRAPPER>
-                {/* <h4>Where</h4> */}
                 <div>
                   <input
                     type="text"
@@ -109,6 +108,8 @@ const SalaryGuide = () => {
       {/* 2nd div Browse top-paying jobs by industry */}
       <h1 style={{ marginLeft: "50px" }}>Browse top-paying jobs by industry</h1>
       <br />
+
+      <br />
       <Button
         onClick={onOpen}
         style={{
@@ -130,7 +131,7 @@ const SalaryGuide = () => {
             <div
               style={{
                 height: "434px",
-                width: "1460px",
+                width: "100%",
                 // border: "1px solid red",
                 margin: "auto",
                 backgroundColor: "white",
@@ -217,7 +218,7 @@ const SalaryGuide = () => {
 
 <TopCompanies/>
 
-    </>
+    </div>
   );
 };
 
