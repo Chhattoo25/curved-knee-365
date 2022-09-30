@@ -99,7 +99,7 @@ const PopularCompany = () => {
   
 
   return (
-    <div className={styles.container}>
+    <div  className={styles.container}>
         {popular.map((item)=>(
             <div style={{marginTop:'10px'}} >
             
