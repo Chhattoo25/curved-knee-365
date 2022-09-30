@@ -26,7 +26,7 @@ export const JobCard = () => {
 
       <JOB_DETAILS_EXTEND>
         <p> <BsFillArrowRightCircleFill style={{color:'blue', marginRight:'0.5rem'}} /> Apply securely with Indeed Resume</p>
-        <p> <BsFillClockFill style={{color:'pink', marginRight:'0.5rem'}} /> Urgently hiring</p>
+        <p> <BsFillClockFill style={{color:'magenta', marginRight:'0.5rem'}} /> Urgently hiring</p>
         <p> <FaUserPlus style={{color:'brown', marginRight:'0.5rem'}} /> Hiring multiple candidates</p>
       </JOB_DETAILS_EXTEND>
 
@@ -44,8 +44,18 @@ export const JobCard = () => {
 const JOBCARD = styled.div`
  border: 1px solid grey;
  border-radius: 0.5rem;
- width: 28rem;
+ width: 100%;
  padding: 1rem;
+
+ &:hover{
+  div{
+    div{
+      h3{
+        text-decoration: underline;
+      }
+    }
+  }
+ }
 `
 const JOBCARD_ROLE_WRAPPER = styled.div`
  display: flex;

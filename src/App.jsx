@@ -14,15 +14,15 @@ function App() {
   const { user } = UserAuth();
   return( 
     <>
-  <div className="App">
-    {user?.displayName ? <Home /> : <SignIn />}</div>
+  {/* <div className="App">
+    {user?.displayName ? <Home /> : <SignIn />}</div> */}
 
   <Navbar/>
     <AllRoutes/>
+  {/* <br/>
   <br/>
   <br/>
-  <br/>
-      <SalaryGuide/>
+      <SalaryGuide/> */}
     </>
     );
 
