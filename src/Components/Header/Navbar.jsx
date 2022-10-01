@@ -139,7 +139,10 @@ const Navbar = () => {
                   
                   
                   <Divider orientation="vertical" flexItem></Divider>
-                  <Tab label="Employers/Post Job" />
+                  <Link to="/postjobs" >
+                    <Tab label="Employers/Post Job" />
+                  </Link>
+                  
                 </Tabs>
               </Box>
             </Box>

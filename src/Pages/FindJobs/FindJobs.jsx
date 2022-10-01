@@ -1,15 +1,35 @@
+
+
+
+
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FullDetailedCard } from "../../Components/FullDetailedCard/FullDetailedCard";
-// import {BiSearch} from 'react-icons/bi'
-// import {MdLocationPin} from 'react-icons/md'
+import {BiSearch} from 'react-icons/bi'
+import {MdLocationPin} from 'react-icons/md'
 import { JobCard } from "../../Components/JobCard/JobCard";
 import { SearchBar } from "../../Components/SearchBar/SearchBar";
 import { UserAuth } from "../../Context/AuthContext";
 
+
 const Home = () => {
   // const [title, setTitle] = useState("");
   // const [location, setLocation] = useState("");
+
+
+
+
+const FindJobs = () => {
+  const [title, setTitle] = useState("");
+  const [location, setLocation] = useState("");
+
+ 
+  
+
+  return (
+    <>
+    <COMPONENT>
+      <SEARCHBAR_CONTAINER>
 
   const { user, logOut } = UserAuth();
 
@@ -27,6 +47,7 @@ const Home = () => {
       {/* <h2>{user.displayName}</h2> */}
       <COMPONENT>
         {/* <SEARCHBAR_CONTAINER>
+
         <SEARCHBAR_CONTAINER_WRAPPER>
           <h4>What</h4>
           <div><input type='text' placeholder='Job title, keywords, or company' value={title} onChange={(e)=>setTitle(e.target.value)} /> </div>
