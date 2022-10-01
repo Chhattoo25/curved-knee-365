@@ -26,10 +26,9 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "light" ? "#1a90ff" : "#308fe8",
   },
 }));
-
-const ApplyThree = ({toogle , data , setData}) => {
+const ApplyFour = ({toogle , setData}) => {
     const navigate = useNavigate();
-  return (
+  return ( 
     <Stack spacing={3} padding={5}>
     <Box>
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -38,35 +37,17 @@ const ApplyThree = ({toogle , data , setData}) => {
         </Button>
         <Button onClick={() => navigate("/")}  disableElevation disableRipple >Exit</Button>
       </Box>
-      <BorderLinearProgress variant="determinate" value={75} />
+      <BorderLinearProgress variant="determinate" value={100} />
     </Box>
-    <Typography>Application step 3 of 4</Typography>
+    <Typography>Application step 4 of 4</Typography>
     <Typography fontWeight="bold" variant="h5">
-    Enter a past job that shows relevant experience
+       Are you confirm to apply this
     </Typography>
-    <Box>
-      <InputLabel id="demo-simple-select-label">
-        <Typography fontWeight="bold" color="black">
-          Job Title*
-        </Typography>
-      </InputLabel>
-      <TextField fullWidth label="job" name="jobTitle" value={data.jobTitle} onChange={setData}  />
-    </Box>
-    <Box>
-      <InputLabel id="demo-simple-select-label">
-        <Typography fontWeight="bold" color="black">
-          Company*
-        </Typography>
-      </InputLabel>
-      <TextField fullWidth label="Company" name="company" value={data.company} onChange={setData} />
-    </Box>
-    <Box>
-      <Button onClick={() => toogle("inc")} variant="contained">
-        Continue
+      <Button variant="contained" onClick={setData}>
+        Submit
       </Button>
-    </Box>
   </Stack>
   )
 }
 
-export default ApplyThree
+export default ApplyFour

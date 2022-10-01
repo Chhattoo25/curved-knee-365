@@ -3,6 +3,7 @@ import Navbar from "./Components/Header/Navbar";
 import SignIn from "./Components/SignIn";
 import { UserAuth } from "./Context/AuthContext";
 import AfterNavbar from "./Pages/AfterLogin/AfterNavbar";
+import { ApplyNow } from "./Pages/ApplyNow/ApplyNow";
 import PopularCompanies from "./Pages/CompanyReview/PopularCompanies";
 import Home from "./Pages/Home/Home";
 
@@ -20,6 +21,7 @@ function App() {
 
   <Navbar/>
     <AllRoutes/>
+    
   {/* <br/>
   <br/>
   <br/>
