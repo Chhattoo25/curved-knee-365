@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <>
       <button onClick={handleSignOut}></button>
-      <h2>{user.displayName}</h2>
+      {/* <h2>{user.displayName}</h2> */}
       <COMPONENT>
         {/* <SEARCHBAR_CONTAINER>
         <SEARCHBAR_CONTAINER_WRAPPER>
