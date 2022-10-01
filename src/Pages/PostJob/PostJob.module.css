@@ -1,0 +1,85 @@
+.PostJob{
+    width: 100%;
+    height: 100%;
+    border: none;
+    margin: 0;
+    margin-top: 60px;
+    /* background-color: blue; */
+
+}
+.PostNav{
+    width: 97.5%;
+    height: 55px;
+    /* border: 1px solid black; */
+    background-color: #2d2d2d;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 0px 20px;
+}
+.PostNav>div>img{
+    width: 85px;
+}
+.help{
+    /* border: 1px solid white; */
+    border-radius: 40px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.help>p{
+    font-size: 15px;
+    
+    color: white;
+}
+.help:hover{
+    background-color: whitesmoke;
+    transition: 0.2s;
+}
+.PostBody{
+    width: auto;
+    height: auto;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-around;
+    background-color: #f3f2f1;
+    gap: -300px;
+    padding: 60px 0px 60px 0px;
+}
+.PostBody>div{
+    border-radius: 10px;
+    /* border: 1px solid red; */
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    background-color: white;
+    margin-left: 30px;
+}
+.PostBody>div>img{
+    width: 400px;
+    height: 250px;
+}
+.button{
+    border: 1px solid lightgray;
+    width: 20%;
+    margin-left: 150px;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+    color: #2557a7;
+    font-weight: bolder;
+    font-size: 15px;
+    cursor: pointer;
+}
+.button:hover{
+    border: 1px solid blue;
+    background: rgb(216, 236, 244);
+    transition: 0.7s;
+}

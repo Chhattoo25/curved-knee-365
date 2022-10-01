@@ -13,6 +13,7 @@ import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import { BsFillPersonFill } from 'react-icons/bs';
 import PersonIcon from '@mui/icons-material/Person';
+import { UserAuth } from '../../Context/AuthContext';
 
 export default function UserModel() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -23,6 +24,18 @@ export default function UserModel() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const { user, logOut } = UserAuth();
+
+
+  const handleSignOut = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
   return (
     <React.Fragment>
       <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
@@ -96,7 +109,7 @@ export default function UserModel() {
           </ListItemIcon>
           Settings
         </MenuItem>
-        <MenuItem>
+        <MenuItem onClick={handleSignOut}>
           <ListItemIcon>
             <Logout fontSize="small" />
           </ListItemIcon>
