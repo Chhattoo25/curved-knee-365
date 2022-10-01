@@ -19,7 +19,7 @@ function App() {
 
 
   <Navbar/>
-    <AllRoutes/>
+    // <AllRoutes/>
   {/* <br/>
   <br/>
   <br/>
