@@ -1,30 +1,20 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { FullDetailedCard } from "../../Components/FullDetailedCard/FullDetailedCard";
 // import {BiSearch} from 'react-icons/bi'
 // import {MdLocationPin} from 'react-icons/md'
 import { JobCard } from "../../Components/JobCard/JobCard";
 import { SearchBar } from "../../Components/SearchBar/SearchBar";
-import { UserAuth } from "../../Context/AuthContext";
+
 
 const Home = () => {
-  // const [title, setTitle] = useState("");
-  // const [location, setLocation] = useState("");
 
-  const { user, logOut } = UserAuth();
-
-  const handleSignOut = async () => {
-    try {
-      await logOut();
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
+  
   return (
     <>
-      <button onClick={handleSignOut}></button>
-      <h2>{user.displayName}</h2>
+      
+      
       <COMPONENT>
         {/* <SEARCHBAR_CONTAINER>
         <SEARCHBAR_CONTAINER_WRAPPER>
@@ -46,7 +36,7 @@ const Home = () => {
 
         <POST_RESUME_CONTAINER>
           <div>
-            <a href="">Post your resume</a>{" "}
+            <Link to="/resume">Post your resume</Link>{" "}
             <span>-It only takes a few seconds</span>
           </div>
           <div>

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {BiSearch} from 'react-icons/bi'
 import {MdLocationPin} from 'react-icons/md'
 import { JobCard } from '../../Components/JobCard/JobCard'
-import { UserAuth } from '../../Context/AuthContext'
+
 
 
 
@@ -12,21 +12,11 @@ const FindJobs = () => {
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
 
-  const {user,logOut} = UserAuth();
-
-  const handleSignOut = async () => {
-    try {
-      await logOut()
-    } catch (error) {
-      console.log(error)
-    }
-  }
+ 
   
 
   return (
     <>
-    <button onClick={handleSignOut}></button>
-    <h2>{user.displayName}</h2>
     <COMPONENT>
       <SEARCHBAR_CONTAINER>
         <SEARCHBAR_CONTAINER_WRAPPER>
