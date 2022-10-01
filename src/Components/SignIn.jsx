@@ -8,7 +8,7 @@ import EastIcon from '@mui/icons-material/East';
 
 function SignIn() {
 
-    const {googleSignIn} = UserAuth();
+    const {googleSignIn , user} = UserAuth();
 
 
     const handleGoogleSignIn = async () => {
@@ -19,6 +19,7 @@ function SignIn() {
             console.log(error)
         }
     }
+
 
   return (
     <div className={styles.main} >
