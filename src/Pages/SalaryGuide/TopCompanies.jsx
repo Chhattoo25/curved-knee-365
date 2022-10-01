@@ -101,10 +101,10 @@ const TopCompanies = () => {
             <div
               style={{
                 height: "434px",
-                width: "100%",
+                width: "1320px",
                 // border: "1px solid red",
                 margin: "auto",
-                backgroundColor: "white",
+                backgroundColor: "#eff2f6",
                 display: "flex",
                 borderRadius: "1rem",
               }}
@@ -114,7 +114,6 @@ const TopCompanies = () => {
                 style={{
                   height: "400px",
                   width: "400px",
-
                   margin: "auto",
                 }}
               >
@@ -134,7 +133,7 @@ const TopCompanies = () => {
                   height: "400px",
                   width: "400px",
                   margin: "auto",
-                  backgroundColor: "white",
+                  backgroundColor: "#eff2f6",
                 }}
               >
                 <br />
@@ -200,7 +199,8 @@ const TopCompanies = () => {
         </div>
         <div>
         <h4 style={{"marginLeft":"50px"}}>Capgemini</h4> 
-        <p style={{"marginLeft":"50px"}}>8.8k Reviews</p>
+        <p style={{"marginLeft":"50px"}}> <span style={{"marginRight":"10px"}}>★★★★☆</span>8.8k Reviews</p>
+      
         </div>
         </div>
 
@@ -213,7 +213,7 @@ const TopCompanies = () => {
         </div>
         <div>
         <h4 style={{"marginLeft":"50px"}}>Tata Consultancy Services(TCS)</h4> 
-        <p style={{"marginLeft":"50px"}}>21.2k Reviews</p>
+        <p style={{"marginLeft":"50px"}}><span style={{"marginRight":"10px"}}>★★★★☆</span>21.2k Reviews</p>
         </div>
         </div>
         <div style={{ "border":"1px solid lightgrey" ,"height":"120px",
@@ -225,7 +225,7 @@ const TopCompanies = () => {
         </div>
         <div>
         <h4 style={{"marginLeft":"50px"}}>Accenture</h4> 
-        <p style={{"marginLeft":"50px"}}>22.3k Reviews</p>
+        <p style={{"marginLeft":"50px"}}><span style={{"marginRight":"10px"}}>★★★★☆</span>22.3k Reviews</p>
         </div>
         </div>
         <div style={{ "border":"1px solid lightgrey" ,"height":"120px",
@@ -237,7 +237,7 @@ const TopCompanies = () => {
         </div>
         <div>
         <h4 style={{"marginLeft":"50px"}}>Cognizant Technology Solution</h4> 
-        <p style={{"marginLeft":"50px"}}>14.9k Reviews</p>
+        <p style={{"marginLeft":"50px"}}><span style={{"marginRight":"10px"}}>★★★★☆</span>14.9k Reviews</p>
         </div>
         </div>
         <div style={{ "border":"1px solid lightgrey" ,"height":"120px",
@@ -249,7 +249,7 @@ const TopCompanies = () => {
         </div>
         <div>
         <h4 style={{"marginLeft":"50px"}}>Byju's</h4> 
-        <p style={{"marginLeft":"50px"}}>407 Reviews</p>
+        <p style={{"marginLeft":"50px"}}><span style={{"marginRight":"10px"}}>★★★☆☆</span>407 Reviews</p>
         </div>
         </div>
         <div style={{ "border":"1px solid lightgrey" ,"height":"120px",
@@ -261,7 +261,7 @@ const TopCompanies = () => {
         </div>
         <div>
         <h4 style={{"marginLeft":"50px"}}>IBM</h4> 
-        <p style={{"marginLeft":"50px"}}>31.7k Reviews</p>
+        <p style={{"marginLeft":"50px"}}><span style={{"marginRight":"10px"}}>★★★★☆</span>31.7k Reviews</p>
         </div>
         </div>
         <div style={{ "border":"1px solid lightgrey" ,"height":"120px",
@@ -285,10 +285,11 @@ const TopCompanies = () => {
         </div>
         <div>
         <h4 style={{"marginLeft":"50px"}}>Indigo Airlines</h4> 
-        <p style={{"marginLeft":"50px"}}>418 Reviews</p>
+        <p style={{"marginLeft":"50px"}}><span style={{"marginRight":"10px"}}>★★★★☆</span>418 Reviews</p>
         </div>
         </div>
     </div>    
+    
     {/* How much Shoul be Earning data */}
     <br />
     <br />

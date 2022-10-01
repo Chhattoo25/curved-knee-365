@@ -9,8 +9,6 @@ import { JobCard } from "../../Components/JobCard/JobCard";
 import { SearchBar } from "../../Components/SearchBar/SearchBar";
 
 
-
-
 const Home = () => {
   const [cardsList, setCardsList] = useState([]);
  const [detailedCard, setDetailedCard] = useState( {})
@@ -40,6 +38,8 @@ const Home = () => {
   return (
     <>
 
+      <button onClick={handleSignOut}></button>
+      {/* <h2>{user.displayName}</h2> */}
       <COMPONENT>
         
         <SearchBar cardsList={cardsList} setCardsList={setCardsList}/>
