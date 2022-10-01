@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom';
+import { FullDetailedCard } from '../../Components/FullDetailedCard/FullDetailedCard';
 import SignIn from '../../Components/SignIn';
 import AfterLogin from '../AfterLogin/AfterLogin';
 import ComapanyReview from '../CompanyReview/ComapanyReview';
@@ -16,6 +17,7 @@ export const AllRoutes = () => {
       <Route path='/findjobs' element={<FindJobs/>} />
       <Route path='/companyreview' element={<ComapanyReview/>} />
       <Route path='/salaryguide' element={<SalaryGuide/>} />
+      <Route path='/home/:id' element={<FullDetailedCard/>} />
 
     </Routes>
   )
