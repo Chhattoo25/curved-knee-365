@@ -13,8 +13,7 @@ const Home = () => {
   
   return (
     <>
-      
-      
+
       <COMPONENT>
         {/* <SEARCHBAR_CONTAINER>
         <SEARCHBAR_CONTAINER_WRAPPER>
