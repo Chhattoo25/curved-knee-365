@@ -1,37 +1,48 @@
-import React, { useState } from "react";
+
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 import { FullDetailedCard } from "../../Components/FullDetailedCard/FullDetailedCard";
-// import {BiSearch} from 'react-icons/bi'
-// import {MdLocationPin} from 'react-icons/md'
 import { JobCard } from "../../Components/JobCard/JobCard";
 import { SearchBar } from "../../Components/SearchBar/SearchBar";
 
 
-const Home = () => {
 
+
+const Home = () => {
+  const [cardsList, setCardsList] = useState([]);
+ const [detailedCard, setDetailedCard] = useState( {})
+ 
+
+const UpdateFullDetailedCard=(val)=>{
+   setDetailedCard(val);
+   console.log(val);
+   console.log(detailedCard);
+}
+  const getAllData=()=>{
+    axios.get("http://localhost:8080/jobs").then((res)=> setCardsList(res.data))
+    .catch((err)=> console.log(err))
+  }
+
+
+  useEffect(()=>{
+    getAllData();
+    
+  },[detailedCard, setCardsList])
   
+console.log(cardsList,detailedCard)
+
+
+
+const Home = () => {
   return (
     <>
 
       <COMPONENT>
-        {/* <SEARCHBAR_CONTAINER>
-        <SEARCHBAR_CONTAINER_WRAPPER>
-          <h4>What</h4>
-          <div><input type='text' placeholder='Job title, keywords, or company' value={title} onChange={(e)=>setTitle(e.target.value)} /> </div>
-          <div> <BiSearch style={{color:'grey', margin:'auto'}} /> </div>
-        </SEARCHBAR_CONTAINER_WRAPPER>
-        <SEARCHBAR_CONTAINER_WRAPPER>
-          <h4>Where</h4>
-          <div><input type='text' placeholder='City, state, or pin code' value={location} onChange={(e)=>setLocation(e.target.value)} /> </div>
-          <div> <MdLocationPin style={{color:'grey', margin:'auto'}} /> </div>
-        </SEARCHBAR_CONTAINER_WRAPPER>
-        <SEARCHBUTTON_WRAPPER>
-          <button>Find jobs</button>
-        </SEARCHBUTTON_WRAPPER>
-    
-      </SEARCHBAR_CONTAINER> */}
-        <SearchBar />
+        
+        <SearchBar cardsList={cardsList} setCardsList={setCardsList}/>
 
         <POST_RESUME_CONTAINER>
           <div>
@@ -61,14 +72,17 @@ const Home = () => {
         </FeedBar>
         <CARDS_SECTION>
           <JOBCARDS_CONTAINER>
-            <JobCard />
-            <JobCard />
-            <JobCard />
-            <JobCard />
+            {
+              cardsList.map((item)=> {
+                return <JobCard item={item} UpdateFullDetailedCard={UpdateFullDetailedCard}/>
+              })
+            }
           </JOBCARDS_CONTAINER>
 
           <FULLJOBCARD_CONTAINER>
-            <FullDetailedCard />
+            <FullDetailedCard  />
+           
+            {/* <FullDetailedCard card={cardsList[1]}/> */}
           </FULLJOBCARD_CONTAINER>
 
         </CARDS_SECTION>
@@ -89,7 +103,7 @@ const COMPONENT = styled.div`
   justify-content: center;
   align-items: center;
   margin: auto;
-
+  padding-top: 10rem;
   hr {
     width: 100%;
   }
@@ -201,12 +215,12 @@ const CARDS_SECTION = styled.div`
   width: 60%;
   justify-content: center;
   position: relative;
+  top: 3rem;
 `;
 const JOBCARDS_CONTAINER = styled.div`
  display: flex;
  flex-direction: column;
- border: 3px dotted red;
- justify-content: center;
+ border: 3px solid transparent;
  align-items: center;
  gap: 1rem;
  padding: 0 1rem;
@@ -220,10 +234,12 @@ const JOBCARDS_CONTAINER = styled.div`
 `
 const FULLJOBCARD_CONTAINER = styled.div`
  display: flex;
- border: 3px solid teal;
+ flex-direction: column;
+ border: 1px solid black;
  width: 50%;
- height: 100vh;
+ max-height: 70vh;
  position: sticky;
+ top:0;
 
  @media screen and (min-width: 400px) and (max-width: 768px){
   display: none;

@@ -1,14 +1,20 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
 export const FullDetailedCard = () => {
+  // console.log(card);
+  const {id} = useParams();
+  console.log(id);
+  const [card,setCard]=useState({})
   return (
-    <FULLDETAILSCARD>
+    <FULLDETAILSCARD key={card._id}>
       <FULLCARD_HEAD>
-        <h3>Lorem, ipsum dolor.</h3>
-        <a href="">Lorem ipsum dolor sit amet.</a>
-        <p>Lorem ipsum dolor sit.</p>
-        <p>4000-70000 a month</p>
+        <h3>{card.position}</h3>
+        <a href="">{card.company}</a>
+        <p>{card.address}</p>
+        <p>{ ` ₹${card.min_salary*1000} - ₹${card.max_salary*1000}`} a month</p>
         <div>
           <button>Apply now</button>
           <button>io</button>
@@ -18,20 +24,19 @@ export const FullDetailedCard = () => {
       <FULLCARD_BODY>
         <h3>Job details</h3>
         <h4>Salary</h4>
-        <small>35000 - 50000 a month</small>
+        <small>{ ` ₹${card.min_salary*1000} - ₹${card.max_salary*1000}`} a month</small>
         <h4>Benefits & Perks</h4>
         <small>Lorem, ipsum dolor.</small>
         <h4>Job Type</h4>
-        <small>Full-time</small>
+        <small>{card.job_type}</small>
 
         <hr />
 
-        <h3>Qualifications</h3>
+        <h3>Responsibility and Duties</h3>
         <ul>
-          <li>Lorem ipsum dolor sit.</li>
-          <li>Atque nesciunt sapiente magnam?</li>
-          <li>Odit dignissimos dolorem est.</li>
-          <li>Quas assumenda iusto quia.</li>
+        {/* {card.resp_and_duties.map((item, index)=>{
+            return <li key={index}>{item.responsibility}</li>
+          })} */}
         </ul>
         <hr />
 
@@ -41,62 +46,25 @@ export const FullDetailedCard = () => {
 
         <h3>Full Job Description</h3>
         <ul>
-          <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-            velit consectetur impedit.
-          </li>
-          <li>
-            Animi quae temporibus dolorem amet corporis iure quod reprehenderit
-            dolor maxime incidunt.
-          </li>
-          <li>
-            Id ad sapiente necessitatibus accusamus similique expedita earum
-            amet repellendus quam alias.
-          </li>
-          <li>
-            Necessitatibus modi eveniet sint adipisci aperiam quo quis nihil,
-            error quisquam cum!
-          </li>
-          <li>
-            Exercitationem eos delectus ea quos assumenda. Veritatis ducimus
-            adipisci alias omnis velit.
-          </li>
-          <li>
-            Cum quaerat laboriosam iure incidunt eveniet? Quo delectus unde iure
-            fugiat dolores.
-          </li>
-          <li>
-            Praesentium, sunt ea! Accusamus aut, nemo aperiam sed labore amet
-            suscipit omnis.
-          </li>
-          <li>
-            Nesciunt praesentium eum aspernatur error quas quibusdam sequi
-            necessitatibus porro unde numquam!
-          </li>
-          <li>
-            Ullam exercitationem iusto accusamus dolores repudiandae eveniet
-            porro iure est deleniti libero.
-          </li>
-          <li>
-            Nulla dicta totam animi fugiat in at perferendis vel quibusdam optio
-            quo?
-          </li>
+          {/* {card.job_desc.map((item, index)=>{
+            return <li key={index}>{item.job_desc_item}</li>
+          })} */}
         </ul>
 
         <hr />
 
         <h3>Hiring Insights</h3>
         <small>
-          Hiring <b>2</b> candidates for this role
+          Hiring <b>{card.req_candidates}</b> candidates for this role
         </small>
         <small>Urgent hiring</small>
 
         <h4>Job activity</h4>
         <ul>
           <li>
-            Employer reviewed job <b>4</b> days ago
+            Employer reviewed job <b> 3</b> days ago
           </li>
-          <li>Posted 12 days ago</li>
+          <li>Posted {Math.random(1,9)*10} days ago</li>
         </ul>
 
         <hr />

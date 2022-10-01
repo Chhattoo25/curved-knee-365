@@ -1,13 +1,39 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import {BiSearch} from 'react-icons/bi'
 import {MdLocationPin} from 'react-icons/md'
+import axios from 'axios';
+// import { getSuggestedQuery } from '@testing-library/react'
 
 
-export const SearchBar = () => {
+export const SearchBar = ({cardsList, setCardsList}) => {
     const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
+  
+  
+  const handle_searchJobs=()=>{
+    let newList =[];
+    if(title){
+      const by_title = cardsList.filter((card)=>{
+        return card.position.toLowerCase().includes(title.trim().toLowerCase()) === true ? true: false
+      })  
+      newList=[...by_title];
+    }
+    if(location){
+      const by_location = cardsList.filter((card)=>{
+        return card.address.toLowerCase().includes(location.trim().toLowerCase()) === true ? true: false
+      })  
+      
+      newList=[...newList, ...by_location];
+    }
+    // console.log(newList);
+    setCardsList(newList);
+  }
+  useEffect(()=>{
+   
+  },[title, location ]);
+
   return (
     <SEARCHBAR_CONTAINER>
         <SEARCHBAR_CONTAINER_WRAPPER>
@@ -20,9 +46,9 @@ export const SearchBar = () => {
           <div><input type='text' placeholder='City, state, or pin code' value={location} onChange={(e)=>setLocation(e.target.value)} /> </div>
           <div> <MdLocationPin style={{color:'grey', margin:'auto'}} /> </div>
         </SEARCHBAR_CONTAINER_WRAPPER>
-        <SEARCHBUTTON_WRAPPER>
-          <button>Find jobs</button>
-        </SEARCHBUTTON_WRAPPER>
+        <SEARCHBUTTON onClick={handle_searchJobs}>
+          Find jobs
+        </SEARCHBUTTON>
     
       </SEARCHBAR_CONTAINER>
   )
@@ -69,8 +95,8 @@ div{
  }
 
 `
-const SEARCHBUTTON_WRAPPER = styled.div`
- button{
+const SEARCHBUTTON = styled.button`
+ 
   align-self: end;
    padding: 0.75rem 1rem;
    background-color: #2557a7;
@@ -80,6 +106,6 @@ const SEARCHBUTTON_WRAPPER = styled.div`
    font-weight: 700;
    @media screen and (min-width: 400px) and (max-width: 768px){
     padding: 0.75rem 16rem;
-   }
+
  }
 `

@@ -5,23 +5,27 @@ import {BiMoney} from 'react-icons/bi';
 import {BsFillClockFill, BsFillArrowRightCircleFill} from 'react-icons/bs';
 import {FiMoreVertical} from 'react-icons/fi';
 import styled from 'styled-components';
-export const JobCard = () => {
+import { useNavigate } from 'react-router-dom';
+
+export const JobCard = ({item}) => {
+  // console.log("sahil",item)
+  const navigate = useNavigate();
   return (
-    <JOBCARD key={2}>
+    <JOBCARD key={item._id} onClick={()=> navigate(`/home/${item._id}`)}>
       <JOBCARD_ROLE_WRAPPER>
         <div>
             <small>new</small>
-            <h3>Bussiness Development Officer</h3>
-            <p>Polinsys Ltd</p>
-            <p>Delhi, Delhi</p>
+            <h3>{item.position}</h3>
+            <p>{item.company}</p>
+            <p>{item.address}</p>
         </div>
         <div><FiMoreVertical/></div>
       </JOBCARD_ROLE_WRAPPER>
 
       <JOB_DETAILS>
-        <h4><BiMoney/> ₹35000-₹4000 a month</h4>
-        <h4><FaSuitcase/> Full-time</h4>
-        <h4> <BsFillClockFill/> Morning shift</h4>
+        <h4><BiMoney/>{ ` ₹${item.min_salary*1000} - ₹${item.max_salary*1000}`} a month</h4>
+        <h4><FaSuitcase/> {item.job_type}</h4>
+        <h4> <BsFillClockFill/> {item.shift} shift</h4>
       </JOB_DETAILS>
 
       <JOB_DETAILS_EXTEND>
@@ -32,9 +36,12 @@ export const JobCard = () => {
 
       <JOB_DESC>
         <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, explicabo!</li>
-            <li>Lorem, ipsum dolor sit amet consectetur adipisicing.</li>
-            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident veniam laudantium quia earum eum. Pariatur!</li>
+           {
+            item.job_desc?.map((desc_item, index)=>{
+              return index<4 ?
+                <li key={index}>{desc_item.job_desc_item}</li>: ''
+            })
+           }
         </ul>
       </JOB_DESC>
     </JOBCARD>
