@@ -21,7 +21,7 @@ function App() {
 
   <Navbar/>
     <AllRoutes/>
-    
+    <ApplyNow/>
   {/* <br/>
   <br/>
   <br/>
