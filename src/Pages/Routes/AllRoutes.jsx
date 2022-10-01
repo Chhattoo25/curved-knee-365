@@ -2,6 +2,8 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom';
 import SignIn from '../../Components/SignIn';
 import AfterLogin from '../AfterLogin/AfterLogin';
+import { ApplyNow } from '../ApplyNow/ApplyNow';
+import { ApplyNowSubmit } from '../ApplyNow/ApplyNowSubmit';
 import ComapanyReview from '../CompanyReview/ComapanyReview';
 import FindJobs from '../FindJobs/FindJobs';
 import Home from "../Home/Home"
@@ -18,6 +20,8 @@ export const AllRoutes = () => {
       <Route path='/findjobs' element={<FindJobs/>} />
       <Route path='/companyreview' element={<ComapanyReview/>} />
       <Route path='/salaryguide' element={<SalaryGuide/>} />
+      <Route path='/applynow' element={<ApplyNow/>} />
+      <Route path='/applynowsubmit' element={<ApplyNowSubmit/>} />
       <Route path='/postjobs' element={<PostJob/>} />
       <Route path='/resume' element={<Resume/>} />
 
