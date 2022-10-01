@@ -20,8 +20,9 @@ function App() {
 
 
   <Navbar/>
+
     <AllRoutes/>
-    
+
   {/* <br/>
   <br/>
   <br/>
