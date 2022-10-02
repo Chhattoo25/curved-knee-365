@@ -24,10 +24,12 @@ const SalaryGuide = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div >
+      <br />
+      <br />
       <div style={{ display: "flex","width":"100%"}}>
         <div
           style={{
-            width: "70%",
+            width: "80%",
             height: "370px",
             backgroundColor: "#e8f3fc",
           }}
@@ -75,7 +77,7 @@ const SalaryGuide = () => {
                 </div>
                 <div>
                   {" "}
-                  <BiSearch style={{ color: "grey", margin: "auto" }} />{" "}
+                  <BiSearch style={{ color: "grey" }} />{" "}
                 </div>
               </SEARCHBAR_CONTAINER_WRAPPER>
               <SEARCHBAR_CONTAINER_WRAPPER>
@@ -90,12 +92,12 @@ const SalaryGuide = () => {
                 <div>
                   {" "}
                   <MdLocationPin
-                    style={{ color: "grey", margin: "auto" }}
+                    style={{ color: "grey" }}
                   />{" "}
                 </div>
               </SEARCHBAR_CONTAINER_WRAPPER>
               <SEARCHBUTTON_WRAPPER>
-                <button style={{ fontSize: "20px" }}>Search</button>
+                <button style={{ fontSize: "18px" }}>Search</button>
               </SEARCHBUTTON_WRAPPER>
             </SEARCHBAR_CONTAINER>
           </div>
@@ -133,10 +135,10 @@ const SalaryGuide = () => {
             <div
               style={{
                 height: "434px",
-                width: "100%",
+                width: "1320px",
                 // border: "1px solid red",
                 margin: "auto",
-                backgroundColor: "white",
+                backgroundColor: "#eff2f6",
                 display: "flex",
                 borderRadius: "1rem",
               }}
@@ -146,7 +148,6 @@ const SalaryGuide = () => {
                 style={{
                   height: "400px",
                   width: "400px",
-
                   margin: "auto",
                 }}
               >
@@ -166,7 +167,7 @@ const SalaryGuide = () => {
                   height: "400px",
                   width: "400px",
                   margin: "auto",
-                  backgroundColor: "white",
+                  backgroundColor: "#eff2f6",
                 }}
               >
                 <br />
@@ -232,7 +233,7 @@ export default SalaryGuide;
 const SEARCHBAR_CONTAINER = styled.div`
   display: flex;
   gap: 1.5rem;
-  justify-content: center;
+   justify-content: center;
   align-items: center;
 
   @media screen and (min-width: 400px) and (max-width: 768px) {
@@ -245,8 +246,8 @@ const SEARCHBAR_CONTAINER_WRAPPER = styled.div`
   justify-content: space-around;
   align-items: center;
   border-radius: 0.5rem;
-  width: 22rem;
-  height: 3.5rem;
+  width: 16rem;
+  height: 2.5rem;
   padding: 0 0.5rem;
   h4 {
     font-weight: bold;
@@ -279,7 +280,7 @@ const SEARCHBAR_CONTAINER_WRAPPER = styled.div`
 // }
 const SEARCHBUTTON_WRAPPER = styled.div`
   button {
-    padding: 0.75rem 1rem;
+    padding: 0.65rem 1rem;
     background-color: #2557a7;
     border: 1px solid transparent;
     border-radius: 0.5rem;

@@ -1,5 +1,8 @@
+
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 import { FullDetailedCard } from "../../Components/FullDetailedCard/FullDetailedCard";
 import { JobCard } from "../../Components/JobCard/JobCard";
@@ -32,14 +35,14 @@ console.log(cardsList,dynamicId)
 
   return (
     <>
-     
+
       <COMPONENT>
         
         <SearchBar cardsList={cardsList} setCardsList={setCardsList}/>
 
         <POST_RESUME_CONTAINER>
           <div>
-            <a href="">Post your resume</a>{" "}
+          <Link to="/resume">Post your resume</Link>{" "}
             <span>-It only takes a few seconds</span>
           </div>
           <div>

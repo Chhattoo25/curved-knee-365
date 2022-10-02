@@ -76,7 +76,7 @@ const Navbar = () => {
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={6} ml='-40px'>
               <Tabs
                 indicatorColor="secondary"
                 value={value2}
@@ -107,7 +107,7 @@ const Navbar = () => {
               </Tabs>
             </Grid>
             {/* <Grid item xs={1} /> */}
-            <Grid itme xs={4}>
+            <Box itme xs={4} ml='100px'>
               <Box>
                 <Tabs
                   indicatorColor="secondary"
@@ -139,10 +139,13 @@ const Navbar = () => {
                   
                   
                   <Divider orientation="vertical" flexItem></Divider>
-                  <Tab label="Employers/Post Job" />
+                  <Link to="/postjobs" >
+                    <Tab label="Employers/Post Job" />
+                  </Link>
+                  
                 </Tabs>
               </Box>
-            </Grid>
+            </Box>
           </Grid>
         )}
       </Toolbar>
