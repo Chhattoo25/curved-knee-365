@@ -11,7 +11,7 @@ import { Footer } from "../CompanyReview/Footer";
 
 const Home = () => {
  const [cardsList, setCardsList] = useState([]);
- const [dynamicId, setDynamicId] = useState('')
+ const [dynamicId, setDynamicId] = useState('633680fe4b9884293800bf66')
 
 
   const getAllData=()=>{
@@ -21,7 +21,8 @@ const Home = () => {
  
   useEffect(()=>{
     getAllData();
-  },[ setCardsList, dynamicId, setDynamicId])
+
+  },[ setCardsList, dynamicId])
 
 console.log(cardsList,dynamicId)
 
@@ -109,61 +110,7 @@ const COMPONENT = styled.div`
     width: 100%;
   }
 `;
-// const SEARCHBAR_CONTAINER = styled.div`
-//  display: flex;
-//  gap: 1.5rem;
-//  justify-content: center;
-//  align-items: center;
 
-//  @media screen and (min-width: 400px) and (max-width: 768px){
-//   flex-direction: column;
-//  }
-// `
-// const SEARCHBAR_CONTAINER_WRAPPER = styled.div`
-// border: 1px solid black;
-// display: flex;
-// align-items: center;
-// border-radius: 0.5rem;
-// width: 22rem;
-// height: 2.5rem;
-// padding: 0 0.5rem;
-// h4{
-//   font-weight: bold;
-//   margin-right: 15px;
-// }
-// div{
-//   display: flex;
-//   input{
-//     width: 14rem;
-//     border-style: hidden;
-//     font-size: 14px;
-//     &:focus {
-//       outline: none;
-//     }
-//     @media screen and (min-width: 400px) and (max-width: 768px){
-//       width: 30rem;
-//      }
-//   }
-// }
-// @media screen and (min-width: 400px) and (max-width: 768px){
-//   width: 35rem;
-//  }
-
-// `
-// const SEARCHBUTTON_WRAPPER = styled.div`
-//  button{
-//   align-self: end;
-//    padding: 0.75rem 1rem;
-//    background-color: #2557a7;
-//    border: 1px solid transparent;
-//    border-radius: 0.5rem;
-//    color: white;
-//    font-weight: 700;
-//    @media screen and (min-width: 400px) and (max-width: 768px){
-//     padding: 0.75rem 16rem;
-//    }
-//  }
-// `
 const POST_RESUME_CONTAINER = styled.div`
   padding: 1.5rem;
   div {
@@ -191,11 +138,14 @@ const FeedBar_TABS = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  div:nth-child(1){
+    border-bottom: 5px solid #2557a7;
+  }
   div {
     width: 17rem;
     display: flex;
     justify-content: center;
-    border-bottom: 5px solid #2557a7;
+    border-bottom: 5px solid transparent;
     h3 {
       display: block;
       span {
@@ -236,9 +186,9 @@ const JOBCARDS_CONTAINER = styled.div`
 const FULLJOBCARD_CONTAINER = styled.div`
  display: flex;
  flex-direction: column;
- border: 1px solid black;
+ border: 1px solid transparent;
  width: 50%;
- max-height: 70vh;
+ max-height: 90vh;
  position: sticky;
  top:0;
 
