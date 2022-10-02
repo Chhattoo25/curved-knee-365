@@ -119,9 +119,13 @@ const Navbar = () => {
                     <>
                      <Box mt={'15px'} mr='15px' display='flex' gap='30px'>
                 
-                  
-                    <BsFillChatLeftTextFill size={'25px'}/>
+
+                  <BsFillChatLeftTextFill size={'25px'}/> 
                     <BsFillBellFill size={'25px'}/>
+
+                   <Link style={{ color:'black'}} to='/notification'> <BsFillChatLeftTextFill size={'25px'}/></Link>
+                    <Link  style={{ color:'black'}}  to='/message'><BsFillBellFill size={'25px'}/></Link>
+
                     <UserModel/>
                 </Box>
                     </>
