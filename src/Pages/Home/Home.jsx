@@ -9,29 +9,22 @@ import { JobCard } from "../../Components/JobCard/JobCard";
 import { SearchBar } from "../../Components/SearchBar/SearchBar";
 import { Footer } from "../CompanyReview/Footer";
 
-
-
 const Home = () => {
  const [cardsList, setCardsList] = useState([]);
  const [dynamicId, setDynamicId] = useState('')
+
 
   const getAllData=()=>{
     axios.get("http://localhost:8080/jobs").then((res)=> setCardsList(res.data))
     .catch((err)=> console.log(err))
   }
-//  const handleDynamicId=()=>{
-//   if(dynamicId===''){
-//     setDynamicId(cardsList[0].id)
-//   }
-//  }
-
  
   useEffect(()=>{
     getAllData();
-    // handleDynamicId();
   },[ setCardsList, dynamicId, setDynamicId])
-  
+
 console.log(cardsList,dynamicId)
+
 
   return (
     <>
@@ -74,12 +67,16 @@ console.log(cardsList,dynamicId)
           <JOBCARDS_CONTAINER >
             {
               cardsList.map((item)=> {
+
+
                 return <JobCard setDynamicId={setDynamicId} item={item} />
+
               })
             }
           </JOBCARDS_CONTAINER>
 
           <FULLJOBCARD_CONTAINER>
+
             <FullDetailedCard dynamicId={dynamicId}  />
            
           </FULLJOBCARD_CONTAINER>
@@ -94,6 +91,7 @@ console.log(cardsList,dynamicId)
 };
 
 export default Home;
+
 // @media screen and (min-width: 400px) and (max-width: 768px){
 
 // }

@@ -11,7 +11,10 @@ export const ApplyNowSubmit = () => {
     const navigate = useNavigate()
 
   return (
-    <Box sx={{width:{sm:'90%',md:'70%',lg:'50%'},m:'auto',mt:'25vh',display:'flex', boxShadow:'4px 4px 5px 1px gray',alignItems:'center',padding:'25px',flexDirection:'column',justifyContent:'center'}}>
+    <Box sx={{width:{sm:'90%',md:'70%',lg:'50%'},m:'auto',mt:'25vh',display:'flex', boxShadow:'4px 4px 5px 1px gray',alignItems:'center',padding:'25px',flexDirection:'column',justifyContent:'center',alignItems:'left'}}>
+      <Box>
+        <img src=''/>
+      </Box>
       <Typography variant='h7'fontWeight={'bold'}>Name</Typography>
         <Box>
             {data.firstName+' '}

@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 
 export const FullDetailedCard = ({dynamicId}) => {
+
   console.log(dynamicId,"Fulldetailedcard id");
  const [card, setCard] = useState({});
 
@@ -29,6 +30,7 @@ export const FullDetailedCard = ({dynamicId}) => {
 
   return (
     <FULLDETAILSCARD key={card.id} >
+
       <FULLCARD_HEAD>
         <h3>{dynamicId}</h3>
         <h3>{card.position}</h3>
