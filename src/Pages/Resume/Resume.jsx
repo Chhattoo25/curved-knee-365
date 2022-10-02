@@ -70,7 +70,7 @@ function Resume() {
             <div style={{display:"flex"}} >
                 <label for="files" className={styles.upload}>Upload your resume</label>
                 <input id='files'  style={{visibility:"hidden"}} type="file" onChange={handlePdfFileChange} />
-                <button style={{fontSize:"16px"}} className={styles.upload} onClick={handlePdfFileSubmit} >Upload</button>
+                <button style={{fontSize:"16px",width:"70%"}} className={styles.upload} onClick={handlePdfFileSubmit} >Upload</button>
                 
             </div>
             {pdfFileError && <div className={styles.errorMsg} >{pdfFileError}</div>}

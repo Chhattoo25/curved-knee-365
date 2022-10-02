@@ -3,6 +3,7 @@ import { Box } from '@mui/system'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserAuth } from '../../Context/AuthContext'
+
 export const ApplyNowSubmit = () => {
 
 const {user} = UserAuth()
