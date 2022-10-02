@@ -6,7 +6,7 @@ const Message = () => {
     <>
       <br />
       <br />
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex",marginTop:'8vh' }}>
         <div
           style={{
             width: "30%",

@@ -10,6 +10,12 @@ import { SearchBar } from "../../Components/SearchBar/SearchBar";
 
 
 const Home = () => {
+  const [open,setOpen] =useState('633680fe944f4d54c8925d1a'
+)
+  const getid = (id)=>{
+    setOpen(id)
+  }
+  console.log(open,'home id')
   const [cardsList, setCardsList] = useState([]);
  const [detailedCard, setDetailedCard] = useState( {})
  
@@ -28,17 +34,17 @@ const UpdateFullDetailedCard=(val)=>{
   useEffect(()=>{
     getAllData();
     
-  },[detailedCard, setCardsList])
+  },[detailedCard, setCardsList,open])
   
 console.log(cardsList,detailedCard)
 
 
 
-const Home = () => {
+// const Home = () => {
   return (
     <>
 
-      <button onClick={handleSignOut}></button>
+      {/* <button onClick={handleSignOut}></button> */}
       {/* <h2>{user.displayName}</h2> */}
       <COMPONENT>
         
@@ -74,13 +80,13 @@ const Home = () => {
           <JOBCARDS_CONTAINER>
             {
               cardsList.map((item)=> {
-                return <JobCard item={item} UpdateFullDetailedCard={UpdateFullDetailedCard}/>
+                return <JobCard key={item._id} item={item} getid={getid} UpdateFullDetailedCard={UpdateFullDetailedCard}/>
               })
             }
           </JOBCARDS_CONTAINER>
 
           <FULLJOBCARD_CONTAINER>
-            <FullDetailedCard  />
+            <FullDetailedCard open={open} />
            
             {/* <FullDetailedCard card={cardsList[1]}/> */}
           </FULLJOBCARD_CONTAINER>

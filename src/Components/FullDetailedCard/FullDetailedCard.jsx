@@ -1,15 +1,33 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 
-export const FullDetailedCard = () => {
-  // console.log(card);
-  const {id} = useParams();
-  console.log(id);
-  const [card,setCard]=useState({})
+export const FullDetailedCard = ({open}) => {
+console.log(open,'fulldetail')
+  const [card,setCard]=useState([])
+  const singleData=()=>{
+    axios.get(`http://localhost:8080/jobs/${open}`).then((res)=>{
+      console.log(res.data,'ch')
+      setCard(res.data)})
+   
+    .catch((err)=> console.log(err)
+  )
+  }
+
+
+  useEffect(()=>{
+    singleData();
+    return ()=>{
+
+    }
+    
+  },[open])
+  console.log(open,'chhatrapal');
+
+  
   return (
-    <FULLDETAILSCARD key={card._id}>
+    <FULLDETAILSCARD key={card._id} className={`${open?'':'block'}`}>
       <FULLCARD_HEAD>
         <h3>{card.position}</h3>
         <a href="">{card.company}</a>

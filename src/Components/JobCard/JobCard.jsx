@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React, { useRef } from 'react'
 import {FaSuitcase, FaUserPlus} from 'react-icons/fa';
 import {BiMoney} from 'react-icons/bi';
 import {BsFillClockFill, BsFillArrowRightCircleFill} from 'react-icons/bs';
@@ -7,11 +7,15 @@ import {FiMoreVertical} from 'react-icons/fi';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
-export const JobCard = ({item}) => {
+export const JobCard = ({item,getid}) => {
   // console.log("sahil",item)
+  let jobcard = useRef()
+  
   const navigate = useNavigate();
   return (
-    <JOBCARD key={item._id} onClick={()=> navigate(`/home/${item._id}`)}>
+    <JOBCARD ref={jobcard} key={item._id} onClick={()=>{
+      console.log(item.id,'open id')
+      getid(item.id)} }>
       <JOBCARD_ROLE_WRAPPER>
         <div>
             <small>new</small>

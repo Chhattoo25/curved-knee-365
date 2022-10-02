@@ -15,6 +15,12 @@ import { BsFillPersonFill } from "react-icons/bs";
 import PersonIcon from "@mui/icons-material/Person";
 import { UserAuth } from "../../Context/AuthContext";
 import DescriptionIcon from '@mui/icons-material/Description';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import ReviewsIcon from '@mui/icons-material/Reviews';
+import MailIcon from '@mui/icons-material/Mail';
+import SettingsIcon from '@mui/icons-material/Settings';
+import HelpIcon from '@mui/icons-material/Help';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 export default function UserModel() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -104,57 +110,48 @@ export default function UserModel() {
 
       <Box mt={'20px'}>
       <MenuItem  >
-        <DescriptionIcon mr='15px'/> 
-        <Typography ml={'15px'}>Profile</Typography>
+        <FavoriteIcon mr='15px'/> 
+        <Typography ml={'15px'}>My Jobs</Typography>
        </MenuItem>
       </Box>
 
       <Box mt={'20px'}>
       <MenuItem  >
-        <DescriptionIcon mr='15px'/> 
-        <Typography ml={'15px'}>Profile</Typography>
+        <ReviewsIcon mr='15px'/> 
+        <Typography ml={'15px'}>My Reviews</Typography>
        </MenuItem>
       </Box>
 
       <Box mt={'20px'}>
       <MenuItem  >
-        <DescriptionIcon mr='15px'/> 
-        <Typography ml={'15px'}>Profile</Typography>
+        <MailIcon mr='15px'/> 
+        <Typography ml={'15px'}>Email Setting</Typography>
        </MenuItem>
       </Box>
 
       <Box mt={'20px'}>
       <MenuItem  >
-        <DescriptionIcon mr='15px'/> 
-        <Typography ml={'15px'}>Profile</Typography>
+        <SettingsIcon mr='15px'/> 
+        <Typography ml={'15px'}>Setting</Typography>
        </MenuItem>
       </Box>
 
       <Box mt={'20px'}>
       <MenuItem  >
-        <DescriptionIcon mr='15px'/> 
-        <Typography ml={'15px'}>Profile</Typography>
+        <HelpIcon mr='15px'/> 
+        <Typography ml={'15px'}>Help Centre</Typography>
        </MenuItem>
       </Box>
        <Divider />
-       {/* <MenuItem>
-         <ListItemIcon>
-           <PersonAdd fontSize="small" />
-         </ListItemIcon>
-         Add another account
-       </MenuItem>
-       <MenuItem>
-         <ListItemIcon>
-           <Settings fontSize="small" />
-         </ListItemIcon>
-         Settings
-       </MenuItem> */}
-       <MenuItem onClick={handleSignOut}>
-         <ListItemIcon>
+      
+    <Box padding={'10px 0px 10px 0px'}>
+    <MenuItem onClick={handleSignOut}>
+         <ExitToAppIcon>
            <Logout fontSize="small" />
-         </ListItemIcon>
-         Sign Out
+         </ExitToAppIcon>
+        <Typography ml={'100px'} fontWeight='bold' color={'#4468aa'}> Sign Out</Typography>
        </MenuItem>
+    </Box>
      </Menu>
       </Box>
       
