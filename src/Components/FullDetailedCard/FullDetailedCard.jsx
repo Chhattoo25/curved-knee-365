@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 
 export const FullDetailedCard = ({dynamicId}) => {
@@ -36,7 +36,8 @@ export const FullDetailedCard = ({dynamicId}) => {
         <p>{card.address}</p>
         <p>{ ` ₹${card.min_salary*1000} - ₹${card.max_salary*1000}`} a month</p>
         <div>
-          <button>Apply now</button>
+          <Link to='/applynow'>
+          <button>Apply now</button></Link>
           <button>io</button>
         </div>
       </FULLCARD_HEAD>

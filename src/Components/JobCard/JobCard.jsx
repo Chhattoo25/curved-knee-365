@@ -54,6 +54,8 @@ const JOBCARD = styled.div`
  padding: 1rem;
 
  &:hover{
+    box-shadow: 0px 0px 0px 2px rgba(0, 144, 237, 0.4);
+   
   div{
     div{
       h3{

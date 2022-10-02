@@ -102,6 +102,7 @@ const COMPONENT = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  background-color: #FAF9F8;
   justify-content: center;
   align-items: center;
   margin: auto;

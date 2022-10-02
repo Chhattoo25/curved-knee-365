@@ -15,30 +15,17 @@ function App() {
   const { user } = UserAuth();
   return (
     <>
+      <div className="App">
+        {/* {user?.displayName ? <Home /> : <SignIn />} */}
+      </div>
 
-  <div className="App">
-    {/* {user?.displayName ? <Home /> : <SignIn />} */}
-    </div>
+      {/* <Notification/> */}
+      {/* <Message/> */}
+      <Navbar />
 
-    {/* <Notification/> */}
-    {/* <Message/> */}
-  <Navbar/>
-
-    <AllRoutes/>
-<<<<<<< HEAD
-    <ApplyNow/>
-=======
-
->>>>>>> ba805c21cb1d7181328c76072a6fac0b450922e2
-  {/* <br/>
-  <br/>
-  <br/>
-      <SalaryGuide/> */}
-
+      <AllRoutes />
     </>
-    );
-
-
+  );
 }
 
 export default App;
