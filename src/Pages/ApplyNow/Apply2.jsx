@@ -125,7 +125,7 @@ const ApplyTwo = ({ toogle , data ,setData}) => {
 <Box>
   
   <input color={'darkblue'}fontWeight='bold' type="file" onChange={handlePdfFileChange}/>
-<button onClick={handlePdfFileSubmit}>Preview</button>
+<button style={{borderRadius:'0.5rem',color:"white",background:"#1976d2",fontWeight:"bolder",border:"none",padding:'0.5rem'}} onClick={handlePdfFileSubmit}>Preview</button>
 <Typography >Use a pdf,docs,doc,rtf and text</Typography></Box>
 </Box>
       
@@ -133,7 +133,7 @@ const ApplyTwo = ({ toogle , data ,setData}) => {
   
 
       <Box>
-        <Button onClick={() => toogle("inc")} variant="contained">
+        <Button  onClick={() => toogle("inc")} variant="contained">
           Continue
         </Button>
       </Box>
