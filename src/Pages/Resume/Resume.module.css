@@ -30,16 +30,18 @@
 }
 .upload{
     color: white;
-    background-color: blue;
-    width: 40%;
+    background-color: #085ff7;
+    width: 60%;
     /* margin: auto; */
     padding: 20px;
     text-align: center;
     border-radius: 50px;
-    /* font-weight: bolder; */
+    font-weight: bolder;
     cursor: pointer;
     border: none;
     align-items: center;
+
+
 }
 /* .upload:focus{
     display: none;
@@ -56,8 +58,8 @@
 }
 .pdfContainer{
     margin: auto;
-    width: 90%;
-    height: 800px;
+    width: 50%;
+    height: 500px;
     background-color: #e4e4e4;
     overflow-y: auto;
     display: flex;

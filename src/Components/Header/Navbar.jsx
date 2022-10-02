@@ -38,9 +38,10 @@ const Navbar = () => {
       
     // }} />
     <AppBar
-    style={{display:'block'}}
       sx={{
-        
+        flexWrap:"nowrap",
+        width:"100%",
+        display:"block",
         bgcolor: "white",
         color: "black",
         boxShadow:
@@ -76,7 +77,7 @@ const Navbar = () => {
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={6} ml='-40px'>
+            <Grid item xs={6} >
               <Tabs
                 indicatorColor="secondary"
                 value={value2}
@@ -107,7 +108,7 @@ const Navbar = () => {
               </Tabs>
             </Grid>
             {/* <Grid item xs={1} /> */}
-            <Box itme xs={4} ml='100px'>
+            <Box itme xs={4} >
               <Box>
                 <Tabs
                   indicatorColor="secondary"
@@ -120,8 +121,7 @@ const Navbar = () => {
                      <Box mt={'15px'} mr='15px' display='flex' gap='30px'>
                 
 
-                  <BsFillChatLeftTextFill size={'25px'}/> 
-                    <BsFillBellFill size={'25px'}/>
+      
 
                    <Link style={{ color:'black'}} to='/notification'> <BsFillChatLeftTextFill size={'25px'}/></Link>
                     <Link  style={{ color:'black'}}  to='/message'><BsFillBellFill size={'25px'}/></Link>
@@ -143,7 +143,7 @@ const Navbar = () => {
                   
                   
                   <Divider orientation="vertical" flexItem></Divider>
-                  <Link to="/postjobs" >
+                  <Link style={{textDecoration:"none",color:"black"}} to="/postjobs" >
                     <Tab label="Employers/Post Job" />
                   </Link>
                   
