@@ -160,11 +160,15 @@ const FULLCARD_BODY = styled.div`
     display: none;
   }
   
+  &::webkit-scroll{
+    display: none;
+  }
   hr {
     margin: 2rem 0 2rem 0;
     color: red;
     cursor: default;
   }
+
  small{
     margin: 1rem;
     display: block;
