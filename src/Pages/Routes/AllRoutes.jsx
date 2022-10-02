@@ -10,7 +10,10 @@ import FindJobs from '../FindJobs/FindJobs';
 import Home from "../Home/Home"
 import PostJob from '../PostJob/PostJob';
 import Resume from '../Resume/Resume';
+import Byjus from '../SalaryGuide/Byjus';
+import Capegemini from '../SalaryGuide/Capegemini';
 import SalaryGuide from '../SalaryGuide/SalaryGuide';
+import Tcs from '../SalaryGuide/Tcs';
 import UserRoute from './userRoute';
 
 export const AllRoutes = () => {
@@ -28,6 +31,12 @@ export const AllRoutes = () => {
       <Route path='/applynowsubmit' element={<ApplyNowSubmit/>} />
       <Route path='/postjobs' element={<PostJob/>} />
       <Route path='/resume' element={<Resume/>} />
+
+      {/* dummy pages salary guides */}
+      <Route path='/capegemini' element={<Capegemini/>} />
+      <Route path='/Tcs' element={<Tcs/>} />
+      <Route path="/Byjus" element={<Byjus/>}/>
+
 
     </Routes>
   )

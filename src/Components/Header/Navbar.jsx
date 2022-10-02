@@ -120,7 +120,7 @@ const Navbar = () => {
                      <Box mt={'15px'} mr='15px' display='flex' gap='30px'>
                 
                   
-                    <BsFillChatLeftTextFill size={'25px'}/>
+                  <BsFillChatLeftTextFill size={'25px'}/> 
                     <BsFillBellFill size={'25px'}/>
                     <UserModel/>
                 </Box>

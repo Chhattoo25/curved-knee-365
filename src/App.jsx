@@ -6,8 +6,8 @@ import AfterNavbar from "./Pages/AfterLogin/AfterNavbar";
 import { ApplyNow } from "./Pages/ApplyNow/ApplyNow";
 import PopularCompanies from "./Pages/CompanyReview/PopularCompanies";
 import Home from "./Pages/Home/Home";
-
 import { AllRoutes } from "./Pages/Routes/AllRoutes";
+import Capegemini from "./Pages/SalaryGuide/Capegemini";
 import Message from "./Pages/SalaryGuide/Message";
 import Notification from "./Pages/SalaryGuide/Notification";
 
@@ -23,8 +23,8 @@ function App() {
     {/* <Notification/> */}
     {/* <Message/> */}
   <Navbar/>
-
     <AllRoutes/>
+    {/* <Capegemini/> */}
 
   {/* <br/>
   <br/>

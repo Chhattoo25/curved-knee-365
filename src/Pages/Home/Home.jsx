@@ -34,11 +34,11 @@ console.log(cardsList,detailedCard)
 
 
 
-const Home = () => {
+// const Home = () => {
   return (
     <>
 
-      <button onClick={handleSignOut}></button>
+      {/* <button onClick={handleSignOut}></button> */}
       {/* <h2>{user.displayName}</h2> */}
       <COMPONENT>
         
