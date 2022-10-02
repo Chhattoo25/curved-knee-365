@@ -21,27 +21,30 @@ import { UserAuth } from "../../Context/AuthContext";
 import UserModel from "../../Pages/AfterLogin/UserModel";
 import { BsFillBellFill, BsFillChatLeftTextFill } from "react-icons/bs";
 
-
-const routes = ["/","/findjobs", "/companyreview", "/salaryguide","signin"];
+const routes = ["/", "/findjobs", "/companyreview", "/salaryguide", "signin"];
 const Navbar = () => {
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
   console.log(isMatch);
   const [value, setValue] = useState();
   const [value2, setValue2] = useState();
-  const {user} = UserAuth();
-  console.log("sahil",user)
-
+  const { user } = UserAuth();
+  console.log("sahil", user);
 
   return (
     // <Route path='/' render={()=>{
-      
+
     // }} />
     <AppBar
+
       sx={{
         flexWrap:"nowrap",
         width:"100%",
         display:"block",
+
+      style={{ display: "block" }}
+      sx={{
+
         bgcolor: "white",
         color: "black",
         boxShadow:
@@ -65,26 +68,27 @@ const Navbar = () => {
           <Grid container>
             <Grid itme xs={2}>
               <Box display={"flex"} gap={"20px"}>
-                <Link to='/'>
-                  
+                <Link to="/">
                   <Box mt={"10px"}>
-                  <img src={indeedlogo} alt="indeedLogo" />
-                </Box>
-                 
+                    <img src={indeedlogo} alt="indeedLogo" />
+                  </Box>
                 </Link>
                 <Box>
                   <img height={50} src={flowerIcon} alt="flowerIcon" />
                 </Box>
               </Box>
             </Grid>
+
             <Grid item xs={6} >
+
+            <Grid item xs={6} ml="-40px">
+
               <Tabs
                 indicatorColor="secondary"
                 value={value2}
                 onChange={(e, val) => setValue2(val)}
                 textColor="inherit"
               >
-                
                 <Tab
                   label="Find Jobs"
                   value={routes[1]}
@@ -103,12 +107,14 @@ const Navbar = () => {
                   component={Link}
                   to={routes[3]}
                 />
-               
-
               </Tabs>
             </Grid>
             {/* <Grid item xs={1} /> */}
+
             <Box itme xs={4} >
+
+            <Box itme xs={4}>
+
               <Box>
                 <Tabs
                   indicatorColor="secondary"
@@ -118,8 +124,15 @@ const Navbar = () => {
                 >
                   {user?.displayName ? (
                     <>
-                     <Box mt={'15px'} mr='15px' display='flex' gap='30px'>
-                
+                      <Box mt={"15px"} mr="15px" display="flex" gap="30px">
+                        <Link style={{ color: "black" }} to="/notification">
+                          {" "}
+                          <BsFillChatLeftTextFill size={"25px"} />
+                        </Link>
+                        <Link style={{ color: "black" }} to="/message">
+                          <BsFillBellFill size={"25px"} />
+                        </Link>
+
 
       
 
@@ -128,25 +141,36 @@ const Navbar = () => {
 
                     <UserModel/>
                 </Box>
+
+                        <UserModel />
+                      </Box>
+
                     </>
-                  ):(
-                  <>
-                  <Tab label="Post Your Resume" to="/" />
-                  <Tab label="Sign In" sx={{ color: "#3757a7" }}  component={Link}
-                  to={routes[4]}>
-                    <Button>Sign In </Button>
-                  </Tab>
+                  ) : (
+                    <>
+                      <Tab label="Post Your Resume" to="/" />
+                      <Tab
+                        label="Sign In"
+                        sx={{ color: "#3757a7" }}
+                        component={Link}
+                        to={routes[4]}
+                      >
+                        <Button>Sign In </Button>
+                      </Tab>
                     </>
                   )}
-  
-                  
-                  
-                  
+
                   <Divider orientation="vertical" flexItem></Divider>
+
                   <Link style={{textDecoration:"none",color:"black"}} to="/postjobs" >
+
+                  <Link
+                    style={{ textDecoration: "none", color: "black" }}
+                    to="/postjobs"
+                  >
+
                     <Tab label="Employers/Post Job" />
                   </Link>
-                  
                 </Tabs>
               </Box>
             </Box>
