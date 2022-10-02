@@ -12,26 +12,14 @@ import Message from "./Pages/SalaryGuide/Message";
 import Notification from "./Pages/SalaryGuide/Notification";
 
 function App() {
-  const { user } = UserAuth();
+  
   return (
     <>
 
-  <div className="App">
-    {/* {user?.displayName ? <Home /> : <SignIn />} */}
-    </div>
-
-    {/* <Notification/> */}
-    {/* <Message/> */}
+  <div className="App"
   <Navbar/>
     <AllRoutes/>
-    {/* <Capegemini/> */}
 
-    <ApplyNow/>
-
-  {/* <br/>
-  <br/>
-  <br/>
-      <SalaryGuide/> */}
 
     </>
     );
