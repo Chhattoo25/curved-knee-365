@@ -12,19 +12,14 @@ import Message from "./Pages/SalaryGuide/Message";
 import Notification from "./Pages/SalaryGuide/Notification";
 
 function App() {
-  
   return (
     <>
-
-  <div className="App"
-  <Navbar/>
-    <AllRoutes/>
-
-
+      <div className="App">
+        <Navbar />
+        <AllRoutes />
+      </div>
     </>
-    );
-
-
+  );
 }
 
 export default App;

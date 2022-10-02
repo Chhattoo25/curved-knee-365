@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 const Foot = styled.div`
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-
+ padding: 2rem ;
+ margin: 4rem 0 ;
+ width: 100%;
+ background-color:#fff;
   ul {
     display: flex;
-
+    gap: 2rem;
     padding: 0;
     font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 
