@@ -7,46 +7,35 @@ import styled from "styled-components";
 import { FullDetailedCard } from "../../Components/FullDetailedCard/FullDetailedCard";
 import { JobCard } from "../../Components/JobCard/JobCard";
 import { SearchBar } from "../../Components/SearchBar/SearchBar";
-
+import { Footer } from "../CompanyReview/Footer";
 
 const Home = () => {
-  const [cardsList, setCardsList] = useState([]);
- const [detailedCard, setDetailedCard] = useState( {})
- 
+ const [cardsList, setCardsList] = useState([]);
+ const [dynamicId, setDynamicId] = useState('')
 
-const UpdateFullDetailedCard=(val)=>{
-   setDetailedCard(val);
-   console.log(val);
-   console.log(detailedCard);
-}
+
   const getAllData=()=>{
     axios.get("http://localhost:8080/jobs").then((res)=> setCardsList(res.data))
     .catch((err)=> console.log(err))
   }
-
-
+ 
   useEffect(()=>{
     getAllData();
-    
-  },[detailedCard, setCardsList])
-  
-console.log(cardsList,detailedCard)
+  },[ setCardsList, dynamicId, setDynamicId])
+
+console.log(cardsList,dynamicId)
 
 
-
-// const Home = () => {
   return (
     <>
 
-      {/* <button onClick={handleSignOut}></button> */}
-      {/* <h2>{user.displayName}</h2> */}
       <COMPONENT>
         
         <SearchBar cardsList={cardsList} setCardsList={setCardsList}/>
 
         <POST_RESUME_CONTAINER>
           <div>
-            <Link to="/resume">Post your resume</Link>{" "}
+          <Link to="/resume">Post your resume</Link>{" "}
             <span>-It only takes a few seconds</span>
           </div>
           <div>
@@ -70,28 +59,39 @@ console.log(cardsList,detailedCard)
           </FeedBar_TABS>
           <div></div>
         </FeedBar>
-        <CARDS_SECTION>
-          <JOBCARDS_CONTAINER>
+
+
+
+        <CARDS_SECTION  >
+
+          <JOBCARDS_CONTAINER >
             {
               cardsList.map((item)=> {
-                return <JobCard item={item} UpdateFullDetailedCard={UpdateFullDetailedCard}/>
+
+
+                return <JobCard setDynamicId={setDynamicId} item={item} />
+
               })
             }
           </JOBCARDS_CONTAINER>
 
           <FULLJOBCARD_CONTAINER>
-            <FullDetailedCard  />
+
+            <FullDetailedCard dynamicId={dynamicId}  />
            
-            {/* <FullDetailedCard card={cardsList[1]}/> */}
           </FULLJOBCARD_CONTAINER>
 
         </CARDS_SECTION>
+
+
+       <Footer></Footer>
       </COMPONENT>
     </>
   );
 };
 
 export default Home;
+
 // @media screen and (min-width: 400px) and (max-width: 768px){
 
 // }

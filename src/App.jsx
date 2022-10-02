@@ -26,6 +26,8 @@ function App() {
     <AllRoutes/>
     {/* <Capegemini/> */}
 
+    <ApplyNow/>
+
   {/* <br/>
   <br/>
   <br/>

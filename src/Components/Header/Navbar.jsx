@@ -76,7 +76,7 @@ const Navbar = () => {
                 </Box>
               </Box>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={6} ml='-40px'>
               <Tabs
                 indicatorColor="secondary"
                 value={value2}
@@ -107,7 +107,7 @@ const Navbar = () => {
               </Tabs>
             </Grid>
             {/* <Grid item xs={1} /> */}
-            <Grid itme xs={4}>
+            <Box itme xs={4} ml='100px'>
               <Box>
                 <Tabs
                   indicatorColor="secondary"
@@ -119,9 +119,13 @@ const Navbar = () => {
                     <>
                      <Box mt={'15px'} mr='15px' display='flex' gap='30px'>
                 
-                  
+
                   <BsFillChatLeftTextFill size={'25px'}/> 
                     <BsFillBellFill size={'25px'}/>
+
+                   <Link style={{ color:'black'}} to='/notification'> <BsFillChatLeftTextFill size={'25px'}/></Link>
+                    <Link  style={{ color:'black'}}  to='/message'><BsFillBellFill size={'25px'}/></Link>
+
                     <UserModel/>
                 </Box>
                     </>
@@ -145,7 +149,7 @@ const Navbar = () => {
                   
                 </Tabs>
               </Box>
-            </Grid>
+            </Box>
           </Grid>
         )}
       </Toolbar>
