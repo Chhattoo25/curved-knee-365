@@ -99,7 +99,7 @@ const Navbar = () => {
               </Tabs>
             </Grid>
             {/* <Grid item xs={1} /> */}
-            <Box itme xs={4} ml="100px">
+            <Box itme xs={4}>
               <Box>
                 <Tabs
                   indicatorColor="secondary"

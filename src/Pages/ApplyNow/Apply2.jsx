@@ -16,7 +16,7 @@
 // export default Apply2
 
 
-import * as React from "react";
+import  React , {useState} from "react";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import LinearProgress, {
@@ -24,6 +24,7 @@ import LinearProgress, {
 } from "@mui/material/LinearProgress";
 import {
   Button,
+  Input,
   InputLabel,
   Stack,
   TextField,
@@ -32,6 +33,13 @@ import {
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useNavigate } from "react-router-dom";
 import { FaFileUpload } from "react-icons/fa";
+
+import {Viewer} from "@react-pdf-viewer/core";
+import {defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
+import '@react-pdf-viewer/core/lib/styles/index.css';
+import '@react-pdf-viewer/default-layout/lib/styles/index.css';
+import {Worker} from '@react-pdf-viewer/core';
+
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 7,
@@ -47,6 +55,50 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 }));
 
 const ApplyTwo = ({ toogle , data ,setData}) => {
+
+  const defaultLayoutPluginInstance = defaultLayoutPlugin();
+
+
+    
+    const [pdfFile,setPdfFile] = useState(null);
+    const [pdfFileError,setPdfFileError] = useState("");
+
+    const [viewPdf,setViewPdf] = useState(null);
+
+    const fileType = ['application/pdf'];
+    const handlePdfFileChange = (e) => {
+        let selectedFile = e.target.files[0];
+        if(selectedFile){
+            if(selectedFile && fileType.includes(selectedFile.type)){
+                let render = new FileReader();
+                render.readAsDataURL(selectedFile);
+                render.onloadend = (e) =>{
+                    setPdfFile(e.target.result);
+                    setPdfFileError('');
+                }
+            }
+            else{
+                setPdfFile(null);
+                setPdfFileError('Please select valid pdf file')
+            }
+        }
+        else{
+            alert("please select your file")
+        }
+    }
+
+    const handlePdfFileSubmit = (e) => {
+        e.preventDefault();
+        if(pdfFile !== null){
+            setViewPdf(pdfFile);
+        }
+        else{
+            setViewPdf(null)
+        }
+    }
+
+
+
   const navigate = useNavigate();
   return (
     <Stack spacing={6} padding={5}>
@@ -70,7 +122,10 @@ const ApplyTwo = ({ toogle , data ,setData}) => {
 <Box component={'button'} bgcolor='silver'> <FaFileUpload/></Box>
 
 
-<Box><Typography color={'darkblue'}fontWeight='bold'>Upload resume</Typography>
+<Box>
+  
+  <input color={'darkblue'}fontWeight='bold' type="file" onChange={handlePdfFileChange}/>
+<button onClick={handlePdfFileSubmit}>Preview</button>
 <Typography >Use a pdf,docs,doc,rtf and text</Typography></Box>
 </Box>
       
@@ -81,6 +136,18 @@ const ApplyTwo = ({ toogle , data ,setData}) => {
         <Button onClick={() => toogle("inc")} variant="contained">
           Continue
         </Button>
+      </Box>
+      <Box sx={{width:'100%',height:'500px',bgcolor:'#e4e4e4',overflowY: 'scroll',
+}}>
+         
+        {viewPdf&&<><Worker workerUrl="https://unpkg.com/pdfjs-dist@2.15.349/build/pdf.worker.min.js">
+            <Viewer fileUrl={viewPdf}
+            plugins={[defaultLayoutPluginInstance]} />
+            </Worker></>}
+
+            {/* if we dont have pdf or viewPdf state is null */}
+            {!viewPdf&&<>No pdf file selected</>}
+        
       </Box>
     </Stack>
   );
