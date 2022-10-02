@@ -4,31 +4,31 @@ import styled from "styled-components";
 import { FullDetailedCard } from "../../Components/FullDetailedCard/FullDetailedCard";
 import { JobCard } from "../../Components/JobCard/JobCard";
 import { SearchBar } from "../../Components/SearchBar/SearchBar";
+import { Footer } from "../CompanyReview/Footer";
 
 
 
 const Home = () => {
-  const [cardsList, setCardsList] = useState([]);
- const [detailedCard, setDetailedCard] = useState( {})
- 
+ const [cardsList, setCardsList] = useState([]);
+ const [dynamicId, setDynamicId] = useState('')
 
-const UpdateFullDetailedCard=(val)=>{
-   setDetailedCard(val);
-   console.log(val);
-   console.log(detailedCard);
-}
   const getAllData=()=>{
     axios.get("http://localhost:8080/jobs").then((res)=> setCardsList(res.data))
     .catch((err)=> console.log(err))
   }
+//  const handleDynamicId=()=>{
+//   if(dynamicId===''){
+//     setDynamicId(cardsList[0].id)
+//   }
+//  }
 
-
+ 
   useEffect(()=>{
     getAllData();
-    
-  },[detailedCard, setCardsList])
+    // handleDynamicId();
+  },[ setCardsList, dynamicId, setDynamicId])
   
-console.log(cardsList,detailedCard)
+console.log(cardsList,dynamicId)
 
   return (
     <>
@@ -63,22 +63,28 @@ console.log(cardsList,detailedCard)
           </FeedBar_TABS>
           <div></div>
         </FeedBar>
-        <CARDS_SECTION>
-          <JOBCARDS_CONTAINER>
+
+
+
+        <CARDS_SECTION  >
+
+          <JOBCARDS_CONTAINER >
             {
               cardsList.map((item)=> {
-                return <JobCard item={item} UpdateFullDetailedCard={UpdateFullDetailedCard}/>
+                return <JobCard setDynamicId={setDynamicId} item={item} />
               })
             }
           </JOBCARDS_CONTAINER>
 
           <FULLJOBCARD_CONTAINER>
-            <FullDetailedCard  />
+            <FullDetailedCard dynamicId={dynamicId}  />
            
-            {/* <FullDetailedCard card={cardsList[1]}/> */}
           </FULLJOBCARD_CONTAINER>
 
         </CARDS_SECTION>
+
+
+       <Footer></Footer>
       </COMPONENT>
     </>
   );

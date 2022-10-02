@@ -17,7 +17,7 @@ export const AllRoutes = () => {
       <Route path='/findjobs' element={<FindJobs/>} />
       <Route path='/companyreview' element={<ComapanyReview/>} />
       <Route path='/salaryguide' element={<SalaryGuide/>} />
-      <Route path='/home/:id' element={<FullDetailedCard/>} />
+      {/* <Route path='/:id' element={<FullDetailedCard/>} /> */}
 
     </Routes>
   )
