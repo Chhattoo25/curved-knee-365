@@ -2,11 +2,14 @@ import React from 'react'
 import {Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure} from "@chakra-ui/react";
 import { Button } from "@mui/material";
 import Footer from './Footer';
+import Capegemini from './Capegemini';
+import { Link } from 'react-router-dom';
 
 const TopCompanies = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
    <>
+
    <br />
     <div style={{marginLeft: "30px","display":"grid",
     "grid-template-columns": "repeat(4,1fr)",
@@ -189,10 +192,10 @@ const TopCompanies = () => {
     "grid-template-rows":"repeat(2,140px)",
     "height":"auto",
     "grid-gap":"5px","marginRight":"30px"}}>  
-
+   <Link to="/capegemini">
         <div style={{ "border":"1px solid lightgrey" ,"height":"120px",
         "width":"410px","borderRadius":"10px",
-        "cursor":"pointer","display":"flex", }}>
+        "cursor":"pointer","display":"flex","color":"black" }}>
           <div>
             <img style={{"height":"80px","width":"80px","marginTop":"20px","marginLeft":"20px"}} 
             src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/064eff7aab72cb84fbb7f92b82f6ac4a"/>  
@@ -203,10 +206,11 @@ const TopCompanies = () => {
       
         </div>
         </div>
-
-        <div style={{ "border":"1px solid lightgrey" ,"height":"120px",
+        </Link>
+       
+<Link to="/Tcs">      <div style={{ "border":"1px solid lightgrey" ,"height":"120px",
         "width":"410px","borderRadius":"10px",
-        "cursor":"pointer","display":"flex", }}>
+        "cursor":"pointer","display":"flex","color":"black" }}>
           <div>
             <img style={{"height":"80px","width":"80px","marginTop":"20px","marginLeft":"20px"}} 
             src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/13b693b4dcc055d2344351b4c9a148e9"/>  
@@ -216,7 +220,11 @@ const TopCompanies = () => {
         <p style={{"marginLeft":"50px"}}><span style={{"marginRight":"10px"}}>★★★★☆</span>21.2k Reviews</p>
         </div>
         </div>
-        <div style={{ "border":"1px solid lightgrey" ,"height":"120px",
+        </Link>  
+
+
+<Link>
+        <div style={{"color":"black", "border":"1px solid lightgrey" ,"height":"120px",
         "width":"410px","borderRadius":"10px",
         "cursor":"pointer","display":"flex", }}>
           <div>
@@ -228,7 +236,9 @@ const TopCompanies = () => {
         <p style={{"marginLeft":"50px"}}><span style={{"marginRight":"10px"}}>★★★★☆</span>22.3k Reviews</p>
         </div>
         </div>
-        <div style={{ "border":"1px solid lightgrey" ,"height":"120px",
+        </Link>    
+        <Link>
+        <div style={{"color":"black", "border":"1px solid lightgrey" ,"height":"120px",
         "width":"410px","borderRadius":"10px",
         "cursor":"pointer","display":"flex", }}>
           <div>
@@ -240,9 +250,12 @@ const TopCompanies = () => {
         <p style={{"marginLeft":"50px"}}><span style={{"marginRight":"10px"}}>★★★★☆</span>14.9k Reviews</p>
         </div>
         </div>
-        <div style={{ "border":"1px solid lightgrey" ,"height":"120px",
+        </Link>
+
+<Link to="/Byjus">
+        <div style={{"color":"black", "border":"1px solid lightgrey" ,"height":"120px",
         "width":"410px","borderRadius":"10px",
-        "cursor":"pointer","display":"flex", }}>
+        "cursor":"pointer","display":"flex","color":"black" }}>
           <div>
             <img style={{"height":"80px","width":"80px","marginTop":"20px","marginLeft":"20px"}} 
             src="https://d2q79iu7y748jz.cloudfront.net/s/_squarelogo/128x128/349d1c5aed5c3943dadc47139a21b79d"/>  
@@ -252,7 +265,10 @@ const TopCompanies = () => {
         <p style={{"marginLeft":"50px"}}><span style={{"marginRight":"10px"}}>★★★☆☆</span>407 Reviews</p>
         </div>
         </div>
-        <div style={{ "border":"1px solid lightgrey" ,"height":"120px",
+        </Link>
+
+        <Link>
+        <div style={{"color":"black", "border":"1px solid lightgrey" ,"height":"120px",
         "width":"410px","borderRadius":"10px",
         "cursor":"pointer","display":"flex", }}>
           <div>
@@ -264,7 +280,9 @@ const TopCompanies = () => {
         <p style={{"marginLeft":"50px"}}><span style={{"marginRight":"10px"}}>★★★★☆</span>31.7k Reviews</p>
         </div>
         </div>
-        <div style={{ "border":"1px solid lightgrey" ,"height":"120px",
+       </Link>
+       <Link>
+        <div style={{ "color":"black","border":"1px solid lightgrey" ,"height":"120px",
         "width":"410px","borderRadius":"10px",
         "cursor":"pointer","display":"flex", }}>
           <div>
@@ -276,7 +294,9 @@ const TopCompanies = () => {
         <p style={{"marginLeft":"50px"}}>88k Reviews</p>
         </div>
         </div>
-        <div style={{ "border":"1px solid lightgrey" ,"height":"120px",
+        </Link>
+        <Link>
+        <div style={{ "color":"black","border":"1px solid lightgrey" ,"height":"120px",
         "width":"410px","borderRadius":"10px",
         "cursor":"pointer","display":"flex", }}>
           <div>
@@ -288,6 +308,7 @@ const TopCompanies = () => {
         <p style={{"marginLeft":"50px"}}><span style={{"marginRight":"10px"}}>★★★★☆</span>418 Reviews</p>
         </div>
         </div>
+        </Link>
     </div>    
     
     {/* How much Shoul be Earning data */}
