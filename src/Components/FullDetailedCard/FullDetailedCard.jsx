@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {AiOutlineHeart} from 'react-icons/ai'
 import styled from "styled-components";
 
@@ -8,28 +8,30 @@ export const FullDetailedCard = ({dynamicId}) => {
 
  
  const [card, setCard] = useState({});
- const [id, setId] = useState(dynamicId || '633680fe4b9884293800bf66');
-
+ const [id, setId] = useState(dynamicId );
+ 
  console.log(id,"Fulldetailedcard id");
 
   const getCard=(id)=>{
     axios.get(`http://localhost:8080/jobs/${id}`).then((res)=>{
        setCard(res.data);
+       setCount((prev)=> prev+1);
     })
     .catch((err)=> console.log(err))
   }
-  console.log(card)
-
+  console.log("Card", card)
+  const [count, setCount] = useState(0);
   useEffect(()=>{
     // if(id===''){
     //   setId('633680fe4b9884293800bf66')
     //   getCard(id)
     // }else{
     //   getCard(id);
-    // }
+    // } 
+
     getCard(id);
   },[id,setCard])
-
+ 
 
 
   return (
@@ -114,10 +116,12 @@ const FULLDETAILSCARD = styled.div`
 const FULLCARD_HEAD = styled.div`
  h3{
     margin: 1.5rem 0 0 1rem;
+    cursor: pointer;
  }
  a{
     margin: 0 0 0 1rem;
     text-decoration: none;
+    cursor: pointer;
     &:hover{
         text-decoration: underline;
     }
@@ -125,12 +129,14 @@ const FULLCARD_HEAD = styled.div`
  p{
     margin: 0.5rem 0 0 1rem;
     color: grey;
+    cursor: default;
  }
  div{
     display: flex;
     gap: 1rem;
     padding: 1rem 0;
     button{
+      cursor: pointer;
         padding: 1rem;
         font-weight: bold;
         color: white;
@@ -157,17 +163,21 @@ const FULLCARD_BODY = styled.div`
   hr {
     margin: 2rem 0 2rem 0;
     color: red;
+    cursor: default;
   }
  small{
     margin: 1rem;
     display: block;
+    cursor: default;
  }
   h3 {
     margin: 0 1rem;
+    cursor: default;
   }
 
   h4 {
     margin: 1rem 0 0 1rem;
+    cursor: default;
   }
 
   ul {
@@ -175,10 +185,12 @@ const FULLCARD_BODY = styled.div`
     li {
       padding: 0.75rem 0;
       font-weight: 300;
+      cursor: default;
     }
   }
 
   button{
+    cursor: pointer;
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: lightgrey;

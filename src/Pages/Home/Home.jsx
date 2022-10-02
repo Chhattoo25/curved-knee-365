@@ -19,10 +19,15 @@ const Home = () => {
     .catch((err)=> console.log(err))
   }
  
+  const handleDynamicId=(id)=>{
+    if(id){
+      setDynamicId(id);
+    }
+  }
   useEffect(()=>{
     getAllData();
-
-  },[ setCardsList, dynamicId])
+    
+  },[ setCardsList, ])
 
 console.log(cardsList,dynamicId)
 
@@ -68,9 +73,7 @@ console.log(cardsList,dynamicId)
           <JOBCARDS_CONTAINER >
             {
               cardsList.map((item)=> {
-
-
-                return <JobCard setDynamicId={setDynamicId} item={item} />
+               return <JobCard setDynamicId={setDynamicId} handleDynamicId={handleDynamicId} item={item} />
 
               })
             }
@@ -78,7 +81,7 @@ console.log(cardsList,dynamicId)
 
           <FULLJOBCARD_CONTAINER>
 
-            <FullDetailedCard dynamicId={dynamicId}  />
+            <FullDetailedCard dynamicId={dynamicId}   />
            
           </FULLJOBCARD_CONTAINER>
 
@@ -175,7 +178,7 @@ const JOBCARDS_CONTAINER = styled.div`
  align-items: center;
  gap: 1rem;
  padding: 0 1rem;
- width: 42%;
+ width: 501.7px;
  @media screen and (min-width: 769px) and (max-width: 1024px){
   width: 30rem;
  }

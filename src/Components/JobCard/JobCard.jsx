@@ -8,10 +8,10 @@ import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
 
-export const JobCard = ({item, setDynamicId }) => {
+export const JobCard = ({item, setDynamicId, handleDynamicId }) => {
   
   return (
-    <JOBCARD key={item.id} onClick={()=> setDynamicId(item.id) }>
+    <JOBCARD key={item.id} onClick={()=> handleDynamicId(item.id) }>
 
       <JOBCARD_ROLE_WRAPPER>
         <div>
@@ -54,7 +54,7 @@ const JOBCARD = styled.div`
  border-radius: 0.5rem;
  width: 100%;
  padding: 1rem;
-
+ cursor: cursor;
  &:hover{
     box-shadow: 0px 0px 0px 2px rgba(0, 144, 237, 0.4);
    
@@ -73,14 +73,18 @@ const JOBCARD_ROLE_WRAPPER = styled.div`
     width: 95%;
     display: flex;
     flex-direction: column;
+    
     small{
       color: darkred;
+      cursor: pointer;
     }
     h3{
         margin: 0px;
+        cursor: pointer;
     }
     p{
         margin: 0px;
+        cursor: default;
         font-size: 16px;
         font-weight: 400;
     }
@@ -97,6 +101,7 @@ const JOB_DETAILS = styled.div`
  gap: 0.5rem;
  h4{
     margin: 0px;
+    cursor: default;
     padding: 0.25rem 0.5rem;
     background-color: #e4e2e0!important;
     border-radius: 0.2rem;
@@ -110,6 +115,7 @@ const JOB_DETAILS_EXTEND = styled.div`
  p{
    display: flex;
    margin: 0px;
+   cursor: default;
    align-items: center;
    padding: 0.25rem 0;
  }
@@ -120,6 +126,7 @@ const JOB_DESC = styled.div`
         font-size: 14px;
         color: grey;
         margin-left: -1.5rem;
+        cursor: default;
     }
  }
 `
