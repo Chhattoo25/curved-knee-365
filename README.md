@@ -37,6 +37,11 @@ npm run start
 - `Material Ui`
 
 ## Features
+- You can Search any Job With Your Prefferd Location
+- Sin In Through Google
+- Upload Resume and save it
+- Apply For job and And save data
+
 
 ## Some Snip Shot Of Our Site 
 
@@ -52,6 +57,22 @@ ___
 ___
 ## Salary Guide
 ![Salary Guide](https://user-images.githubusercontent.com/95302680/193470344-5e6facda-b2f8-4b99-8faf-f557b392e9af.png)
+___
+## Sign In Page
+![Sign In](https://user-images.githubusercontent.com/95302680/193471319-50fa2a6a-e11d-4614-9c06-94e0896d9bb6.png)
+___
+
+## Apply Now
+![Appoly Now](https://user-images.githubusercontent.com/95302680/193471430-69dafc77-c1cb-45ab-89b3-6458f90d61e9.png)
+___
+## Resume Upload
+![Resume Upload](https://user-images.githubusercontent.com/95302680/193471511-e07ab548-7832-4151-914f-d7c954cbe7e6.png)
+___
+## FInal
+![Submit Page](https://user-images.githubusercontent.com/95302680/193471579-0238756a-f188-4301-990a-509bc42d8228.png)
+
+
+
 
 
 
