@@ -100,7 +100,7 @@ export default Home;
 
 // }
 const COMPONENT = styled.div`
-  border: 1px solid red;
+  
   display: flex;
   flex-direction: column;
   width: 100%;
