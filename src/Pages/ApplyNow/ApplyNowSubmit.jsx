@@ -2,18 +2,19 @@ import { Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import { UserAuth } from '../../Context/AuthContext'
 export const ApplyNowSubmit = () => {
 
-
+const {user} = UserAuth()
+console.log(user,'applysubmit')
     let data = JSON.parse(localStorage.getItem("Applied_Data"))
 
     const navigate = useNavigate()
 
   return (
-    <Box sx={{width:{sm:'90%',md:'70%',lg:'50%'},m:'auto',mt:'25vh',display:'flex', boxShadow:'4px 4px 5px 1px gray',alignItems:'center',padding:'25px',flexDirection:'column',justifyContent:'center',alignItems:'left'}}>
+    <Box sx={{width:{sm:'90%',md:'70%',lg:'50%'},m:'auto',mt:'25vh',display:'flex', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px',alignItems:'center',padding:'25px',flexDirection:'column',justifyContent:'center',alignItems:'left',borderRadius:'10px'}}>
       <Box>
-        <img src=''/>
+        <img src={user.photoURL}/>
       </Box>
       <Typography variant='h7'fontWeight={'bold'}>Name</Typography>
         <Box>
