@@ -21,7 +21,12 @@ import MailIcon from '@mui/icons-material/Mail';
 import SettingsIcon from '@mui/icons-material/Settings';
 import HelpIcon from '@mui/icons-material/Help';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+
+
+
+
 export default function UserModel() {
+  
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -99,7 +104,7 @@ export default function UserModel() {
        anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
      >
        <MenuItem>
-         <Typography fontWeight={'bold'}>Chhatrapal12@gmail.com</Typography>
+         <Typography fontWeight={'bold'}>{user.email}</Typography>
        </MenuItem>
       <Box mt={'20px'}>
       <MenuItem  >

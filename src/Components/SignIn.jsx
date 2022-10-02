@@ -1,14 +1,22 @@
 import React from 'react';
 import styles from "./SignIn.module.css";
 import {UserAuth} from "../Context/AuthContext";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import EastIcon from '@mui/icons-material/East';
+
+
 
 
 
 function SignIn() {
 
+   
     const {googleSignIn , user} = UserAuth();
+const navigate = useNavigate()
+    if(user?.displayName!=="")
+    {
+        navigate('/')
+    }
 
 
     const handleGoogleSignIn = async () => {
