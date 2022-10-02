@@ -17,12 +17,12 @@ console.log(user,'applysubmit')
 
 
 <Box sx={{h:'100%',background:"#6ecde3",borderRadius:"10px 0px 0px 10px"}}>
-      <img style={{marginTop:"50px",marginRight:"20px",borderRadius:"50%",border:'2px solid black',width:'200px'}} src={user.photoURL}/>
+      <img style={{marginTop:"50px",marginRight:"20px",marginLeft:'10px',borderRadius:"50%",border:'2px solid black',width:'200px'}} src={user.photoURL}/>
       </Box>
       
 
 
-      <Box sx={{background:"#6ecde3",padding:"10px 0px 0px 10px",}}>
+      <Box sx={{background:"#6ecde3",padding:"10px 0px 0px 10px"}}>
         <Typography sx={{textDecoration:'underline'}} variant='h7'fontWeight={'bold'}>Name</Typography>
         <Box>
             {data.firstName+' '}
