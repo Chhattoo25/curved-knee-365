@@ -25,7 +25,7 @@ npm install
 npm run start
 ```
 ## Deployment Link
-
+[Live Vercel Link](https://indeed-clone-ten.vercel.app/)
 
 ## Techs We Use
 - `HTML`
