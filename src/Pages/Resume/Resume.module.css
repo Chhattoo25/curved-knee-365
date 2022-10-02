@@ -32,11 +32,36 @@
     color: white;
     background-color: blue;
     width: 40%;
-    margin: auto;
+    /* margin: auto; */
     padding: 20px;
     text-align: center;
     border-radius: 50px;
-    font-weight: bolder;
+    /* font-weight: bolder; */
     cursor: pointer;
-
+    border: none;
+    align-items: center;
+}
+/* .upload:focus{
+    display: none;
+} */
+/* .upload::placeholder{
+    color: white;
+} */
+.errorMsg{
+    width: 100%;
+    color: red;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.pdfContainer{
+    margin: auto;
+    width: 90%;
+    height: 800px;
+    background-color: #e4e4e4;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
