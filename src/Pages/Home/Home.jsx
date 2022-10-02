@@ -7,52 +7,46 @@ import styled from "styled-components";
 import { FullDetailedCard } from "../../Components/FullDetailedCard/FullDetailedCard";
 import { JobCard } from "../../Components/JobCard/JobCard";
 import { SearchBar } from "../../Components/SearchBar/SearchBar";
-
+import { Footer } from "../CompanyReview/Footer";
 
 const Home = () => {
-  const [open,setOpen] =useState('633680fe944f4d54c8925d1a'
-)
-  const getid = (id)=>{
-    setOpen(id)
-  }
-  console.log(open,'home id')
-  const [cardsList, setCardsList] = useState([]);
- const [detailedCard, setDetailedCard] = useState( {})
- 
 
-const UpdateFullDetailedCard=(val)=>{
-   setDetailedCard(val);
-   console.log(val);
-   console.log(detailedCard);
-}
+
+
+ const [cardsList, setCardsList] = useState([]);
+ const [dynamicId, setDynamicId] = useState('')
+
+
   const getAllData=()=>{
     axios.get("http://localhost:8080/jobs").then((res)=> setCardsList(res.data))
     .catch((err)=> console.log(err))
   }
+//  const handleDynamicId=()=>{
+//   if(dynamicId===''){
+//     setDynamicId(cardsList[0].id)
+//   }
+//  }
 
-
+ 
   useEffect(()=>{
     getAllData();
-    
-  },[detailedCard, setCardsList,open])
-  
-console.log(cardsList,detailedCard)
+
+    // handleDynamicId();
+  },[ setCardsList, dynamicId, setDynamicId])
+
+console.log(cardsList,dynamicId)
 
 
-
-// const Home = () => {
   return (
     <>
 
-      {/* <button onClick={handleSignOut}></button> */}
-      {/* <h2>{user.displayName}</h2> */}
       <COMPONENT>
         
         <SearchBar cardsList={cardsList} setCardsList={setCardsList}/>
 
         <POST_RESUME_CONTAINER>
           <div>
-            <Link to="/resume">Post your resume</Link>{" "}
+          <Link to="/resume">Post your resume</Link>{" "}
             <span>-It only takes a few seconds</span>
           </div>
           <div>
@@ -76,22 +70,32 @@ console.log(cardsList,detailedCard)
           </FeedBar_TABS>
           <div></div>
         </FeedBar>
-        <CARDS_SECTION>
-          <JOBCARDS_CONTAINER>
+
+
+
+        <CARDS_SECTION  >
+
+          <JOBCARDS_CONTAINER >
             {
               cardsList.map((item)=> {
-                return <JobCard key={item._id} item={item} getid={getid} UpdateFullDetailedCard={UpdateFullDetailedCard}/>
+
+
+                return <JobCard setDynamicId={setDynamicId} item={item} />
+
               })
             }
           </JOBCARDS_CONTAINER>
 
           <FULLJOBCARD_CONTAINER>
-            <FullDetailedCard open={open} />
+
+            <FullDetailedCard dynamicId={dynamicId}  />
            
-            {/* <FullDetailedCard card={cardsList[1]}/> */}
           </FULLJOBCARD_CONTAINER>
 
         </CARDS_SECTION>
+
+
+       <Footer></Footer>
       </COMPONENT>
     </>
   );

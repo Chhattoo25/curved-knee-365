@@ -7,15 +7,12 @@ import {FiMoreVertical} from 'react-icons/fi';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
-export const JobCard = ({item,getid}) => {
-  // console.log("sahil",item)
-  let jobcard = useRef()
+
+export const JobCard = ({item, setDynamicId }) => {
   
-  const navigate = useNavigate();
   return (
-    <JOBCARD ref={jobcard} key={item._id} onClick={()=>{
-      console.log(item.id,'open id')
-      getid(item.id)} }>
+    <JOBCARD key={item.id} onClick={()=> setDynamicId(item.id) }>
+
       <JOBCARD_ROLE_WRAPPER>
         <div>
             <small>new</small>
