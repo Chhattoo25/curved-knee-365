@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
 const Foot = styled.div`
- padding: 2rem ;
+ 
  margin: 4rem 0 ;
- width: 100%;
+ width: 90%;
  background-color:#fff;
+ div{
+  padding: 1rem 0;
   ul {
     display: flex;
     gap: 2rem;
@@ -49,6 +51,8 @@ const Foot = styled.div`
       
     }
   }
+ }
+  
 `;
 
 export function Footer() {

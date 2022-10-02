@@ -1,38 +1,43 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import {AiOutlineHeart} from 'react-icons/ai'
 import styled from "styled-components";
 
 export const FullDetailedCard = ({dynamicId}) => {
 
-  console.log(dynamicId,"Fulldetailedcard id");
+ 
  const [card, setCard] = useState({});
+ const [id, setId] = useState(dynamicId );
+ 
+ console.log(id,"Fulldetailedcard id");
 
-  //  const getData=(dynamicId)=>{
-  //      const x =cardList.find((item)=> item.id === dynamicId )
-  //      setCard(x);
-  //  }
-  
-  const getCard=(dynamicId='')=>{
-    axios.get(`http://localhost:8080/jobs/${dynamicId}`).then((res)=>{
+  const getCard=(id)=>{
+    axios.get(`http://localhost:8080/jobs/${id}`).then((res)=>{
        setCard(res.data);
-       console.log(res.data, "RRR")
+       setCount((prev)=> prev+1);
     })
     .catch((err)=> console.log(err))
   }
-
+  console.log("Card", card)
+  const [count, setCount] = useState(0);
   useEffect(()=>{
-    // getData(dynamicId);
-    getCard(dynamicId);
-  },[])
+    // if(id===''){
+    //   setId('633680fe4b9884293800bf66')
+    //   getCard(id)
+    // }else{
+    //   getCard(id);
+    // } 
 
+    getCard(id);
+  },[id,setCard])
+ 
 
 
   return (
     <FULLDETAILSCARD key={card.id} >
 
       <FULLCARD_HEAD>
-        <h3>{dynamicId}</h3>
         <h3>{card.position}</h3>
         <a href="">{card.company}</a>
         <p>{card.address}</p>
@@ -40,7 +45,7 @@ export const FullDetailedCard = ({dynamicId}) => {
         <div>
           <Link to='/applynow'>
           <button>Apply now</button></Link>
-          <button>io</button>
+          <button><AiOutlineHeart/></button>
         </div>
       </FULLCARD_HEAD>
       <hr />
@@ -57,9 +62,9 @@ export const FullDetailedCard = ({dynamicId}) => {
 
         <h3>Responsibility and Duties</h3>
         <ul>
-        {/* {card.resp_and_duties.map((item, index)=>{
+        {card.resp_and_duties?.map((item, index)=>{
             return <li key={index}>{item.responsibility}</li>
-          })} */}
+          })}
         </ul>
         <hr />
 
@@ -69,9 +74,9 @@ export const FullDetailedCard = ({dynamicId}) => {
 
         <h3>Full Job Description</h3>
         <ul>
-          {/* {card.job_desc.map((item, index)=>{
+          {card.job_desc?.map((item, index)=>{
             return <li key={index}>{item.job_desc_item}</li>
-          })} */}
+          })}
         </ul>
 
         <hr />
@@ -85,9 +90,9 @@ export const FullDetailedCard = ({dynamicId}) => {
         <h4>Job activity</h4>
         <ul>
           <li>
-            Employer reviewed job <b> 3</b> days ago
+            Employer reviewed job <b>{(Math.random(1,9)*10).toFixed(0)}</b> days ago
           </li>
-          <li>Posted {Math.random(1,9)*10} days ago</li>
+          <li>Posted {(Math.random(1,9)*10).toFixed(0)} days ago</li>
         </ul>
 
         <hr />
@@ -100,7 +105,7 @@ export const FullDetailedCard = ({dynamicId}) => {
 
 const FULLDETAILSCARD = styled.div`
   width: 100%;
-  border: 2px solid transparent;
+  border: 1px solid grey;
   border-radius: 0.5rem;
   position: sticky;
   overflow: hidden;
@@ -111,10 +116,12 @@ const FULLDETAILSCARD = styled.div`
 const FULLCARD_HEAD = styled.div`
  h3{
     margin: 1.5rem 0 0 1rem;
+    cursor: pointer;
  }
  a{
     margin: 0 0 0 1rem;
     text-decoration: none;
+    cursor: pointer;
     &:hover{
         text-decoration: underline;
     }
@@ -122,12 +129,14 @@ const FULLCARD_HEAD = styled.div`
  p{
     margin: 0.5rem 0 0 1rem;
     color: grey;
+    cursor: default;
  }
  div{
     display: flex;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1rem 0;
     button{
+      cursor: pointer;
         padding: 1rem;
         font-weight: bold;
         color: white;
@@ -135,8 +144,9 @@ const FULLCARD_HEAD = styled.div`
         border: 1px solid transparent;
         border-radius: 0.5rem;
      }
-     & :nt-child(2){
-      background-color: red;
+     button:nth-child(2){
+      background-color: lightgrey;
+      color: black;
      }
  }
  
@@ -146,21 +156,28 @@ const FULLCARD_BODY = styled.div`
   height: 70%;
   padding: 1rem 0;
   overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   
   hr {
     margin: 2rem 0 2rem 0;
     color: red;
+    cursor: default;
   }
  small{
     margin: 1rem;
     display: block;
+    cursor: default;
  }
   h3 {
     margin: 0 1rem;
+    cursor: default;
   }
 
   h4 {
     margin: 1rem 0 0 1rem;
+    cursor: default;
   }
 
   ul {
@@ -168,7 +185,17 @@ const FULLCARD_BODY = styled.div`
     li {
       padding: 0.75rem 0;
       font-weight: 300;
+      cursor: default;
     }
   }
 
+  button{
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: lightgrey;
+    color: black;
+    border: 1px solid transparent;
+    margin-left: 1rem;
+  }
 `;
