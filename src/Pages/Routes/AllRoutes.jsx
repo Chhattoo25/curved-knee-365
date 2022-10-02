@@ -22,7 +22,11 @@ export const AllRoutes = () => {
       <Route path='/companyreview' element={<ComapanyReview/>} />
       <Route path='/salaryguide' element={<SalaryGuide/>} />
 
+      {/* <Route path='/:id' element={<FullDetailedCard/>} /> */}
+
+
       <Route path='/home/:id' element={<FullDetailedCard/>} />
+
 
       <Route path='/applynow' element={<ApplyNow/>} />
       <Route path='/applynowsubmit' element={<ApplyNowSubmit/>} />

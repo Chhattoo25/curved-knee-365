@@ -30,8 +30,9 @@ export const SearchBar = ({cardsList, setCardsList}) => {
     // console.log(newList);
     setCardsList(newList);
   }
+
   useEffect(()=>{
-   
+    
   },[title, location ]);
 
   return (
