@@ -25,11 +25,9 @@ function App() {
   <Navbar/>
 
     <AllRoutes/>
-<<<<<<< HEAD
-    <ApplyNow/>
-=======
 
->>>>>>> ba805c21cb1d7181328c76072a6fac0b450922e2
+    <ApplyNow/>
+
   {/* <br/>
   <br/>
   <br/>

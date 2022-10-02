@@ -10,6 +10,8 @@ import FindJobs from '../FindJobs/FindJobs';
 import Home from "../Home/Home"
 import PostJob from '../PostJob/PostJob';
 import Resume from '../Resume/Resume';
+import Message from '../SalaryGuide/Message';
+import Notification from '../SalaryGuide/Notification';
 import SalaryGuide from '../SalaryGuide/SalaryGuide';
 import UserRoute from './userRoute';
 
@@ -32,6 +34,8 @@ export const AllRoutes = () => {
       <Route path='/applynowsubmit' element={<ApplyNowSubmit/>} />
       <Route path='/postjobs' element={<PostJob/>} />
       <Route path='/resume' element={<Resume/>} />
+      <Route path='/notification' element={<Notification/>} />
+      <Route path='/message' element={<Message/>} />
 
     </Routes>
   )
