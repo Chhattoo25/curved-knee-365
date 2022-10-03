@@ -15,7 +15,7 @@ const Home = () => {
 
 
   const getAllData=()=>{
-    axios.get("http://localhost:8080/jobs").then((res)=> setCardsList(res.data))
+    axios.get("https://calendlyauth.herokuapp.com/jobs").then((res)=> setCardsList(res.data))
     .catch((err)=> console.log(err))
   }
  

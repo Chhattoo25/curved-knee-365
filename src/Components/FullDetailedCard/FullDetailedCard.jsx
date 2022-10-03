@@ -13,7 +13,7 @@ export const FullDetailedCard = ({dynamicId}) => {
  console.log(id,"Fulldetailedcard id");
 
   const getCard=(id)=>{
-    axios.get(`http://localhost:8080/jobs/${id}`).then((res)=>{
+    axios.get(`https://calendlyauth.herokuapp.com/jobs/${id}`).then((res)=>{
        setCard(res.data);
        setCount((prev)=> prev+1);
     })
