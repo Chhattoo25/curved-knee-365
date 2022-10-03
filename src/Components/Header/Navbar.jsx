@@ -219,13 +219,14 @@ const Navbar = () => {
     // <Route path='/' render={()=>{
       
     // }} />
-    <Box
+    <AppBar
       sx={{
         flexWrap:"nowrap",
         width:"100%",
         display:"block",
         bgcolor: "white",
         color: "black",
+        boxSizing:'border-box',
         boxShadow:
           "rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px",
       }}
@@ -335,7 +336,7 @@ const Navbar = () => {
           </Grid>
         )}
       </Toolbar>
-    </Box>
+    </AppBar>
   );
 };
 
