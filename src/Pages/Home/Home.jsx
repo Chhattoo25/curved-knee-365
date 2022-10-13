@@ -1,6 +1,7 @@
 
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 import styled from "styled-components";
@@ -13,7 +14,9 @@ const Home = () => {
  const [cardsList, setCardsList] = useState([]);
  const [dynamicId, setDynamicId] = useState('633680fe4b9884293800bf66')
 
-
+ const {cardList} = useSelector((state)=> state.AppReducer.cardList )
+ const dispatch = useDispatch();
+ 
   const getAllData=()=>{
     axios.get("https://calendlyauth.herokuapp.com/jobs").then((res)=> setCardsList(res.data))
     .catch((err)=> console.log(err))
